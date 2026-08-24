@@ -33,75 +33,6 @@
       </tags>
   </entry>
   <entry>
-    <title>butterfly功能扩展</title>
-    <url>/2026/08/24/butterfly%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</url>
-    <content><![CDATA[<h2 id="评论功能扩展"><a href="#评论功能扩展" class="headerlink" title="评论功能扩展"></a>评论功能扩展</h2><ol>
-<li>解锁 GitHub 评论功能</li>
-</ol>
-<ul>
-<li>进入对应仓库的设置页面</li>
-<li>勾选 <code>Discussions</code> 选项</li>
-<li>侧边栏选择 <code>GitHub Apps</code></li>
-<li>安装 <code>giscus</code> 应用</li>
-</ul>
-<ol start="2">
-<li>配置 <code>Giscus</code></li>
-</ol>
-<ul>
-<li>访问 <a href="https://giscus.app/">Giscus</a> 官方网站</li>
-<li>选择对应的语言</li>
-<li>填入对应的仓库</li>
-<li>映射关系选择第一个 <code>pathname</code></li>
-<li>分类选择 <code>Announcement</code></li>
-<li>其他选择默认即可，最后启用giscus下面会生成一个 <code>&lt;script&gt;</code> 标签</li>
-<li>配置 <code>_config.butterfly.yml</code> 中的 <code>giscus</code> 配置信息<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">Giscus</span>  <span class="comment"># 启用 Giscus 评论功能</span></span><br><span class="line">  <span class="attr">text:</span> <span class="literal">true</span>   <span class="comment"># 启用文本评论</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span> <span class="comment"># 启用懒加载评论</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">false</span>   <span class="comment"># 启用评论数量统计</span></span><br><span class="line">  <span class="attr">card_post_count:</span> <span class="literal">false</span> <span class="comment"># 启用卡片评论数量统计</span></span><br><span class="line"></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">yourname/yourrepo</span> <span class="comment"># 填写script标签中的 data-repo 值</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="string">your_repo_id</span>   <span class="comment"># 填写script标签中的 data-repo-id 值</span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="string">your_category_id</span> <span class="comment"># 填写script标签中的 data-category-id 值</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">      <span class="attr">light:</span> <span class="string">light</span></span><br><span class="line">      <span class="attr">dark:</span> <span class="string">dark</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">      <span class="attr">mapping:</span> <span class="string">pathname</span> <span class="comment"># 填写script标签中的 data-mapping 值</span></span><br><span class="line">      <span class="attr">strict:</span> <span class="number">0</span> <span class="comment"># 填写script标签中的 data-strict 值</span></span><br><span class="line">      <span class="attr">reactions-enabled:</span> <span class="number">1</span> <span class="comment"># 填写script标签中的 data-reactions-enabled 值</span></span><br><span class="line">      <span class="attr">emit-metadata:</span> <span class="number">0</span> <span class="comment"># 填写script标签中的 data-emit-metadata 值</span></span><br><span class="line">      <span class="attr">input-position:</span> <span class="string">bottom</span> <span class="comment"># 填写script标签中的 data-input-position 值</span></span><br><span class="line">      <span class="attr">lang:</span> <span class="string">zh-CN</span> <span class="comment"># 填写script标签中的 data-lang 值</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>验证 Giscus 评论功能</li>
-</ol>
-<ul>
-<li>访问博客</li>
-<li>查看评论功能是否正常</li>
-<li>如果正常，说明 Giscus 评论功能配置成功</li>
-<li>如果不正常，说明 Giscus 评论功能配置失败</li>
-</ul>
-<h2 id="搜索功能扩展"><a href="#搜索功能扩展" class="headerlink" title="搜索功能扩展"></a>搜索功能扩展</h2><ol>
-<li>安装搜索插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></li>
-<li>配置 <code>_config.yml</code> ,在末尾加入以下内容<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure></li>
-<li>配置 <code>_config.butterfly.yml</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">local_search</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">搜索</span></span><br><span class="line"></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">CDN:</span></span><br></pre></td></tr></table></figure></li>
-<li>验证搜索功能</li>
-</ol>
-<ul>
-<li>访问博客</li>
-<li>查看搜索功能是否正常</li>
-<li>如果正常，说明搜索功能配置成功</li>
-<li>如果不正常，说明搜索功能配置失败</li>
-</ul>
-<h2 id="自定义美化"><a href="#自定义美化" class="headerlink" title="自定义美化"></a>自定义美化</h2><ol>
-<li><code>source</code> 中新建 <code>css\custom.css</code> 文件和 <code>js\custom.js</code> 文件</li>
-<li>配置 <code>_config.butterfly.yml</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line"><span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/custom.css&quot;&gt;</span></span><br><span class="line"><span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/custom.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>接下来就可以尝试在这两个文件中添加自定义的样式和脚本了</li>
-</ol>
-<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ol>
-<li>评论功能或搜索功能配置失败<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
-<li>搜索按钮点击后没有反应</li>
-</ol>
-<ul>
-<li>严格检查两个配置文件的相关内容，可能是一些细节输入有误</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术文档</category>
-      </categories>
-      <tags>
-        <tag>butterfly</tag>
-        <tag>功能扩展</tag>
-        <tag>评论</tag>
-        <tag>搜索</tag>
-        <tag>自定义美化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>butterfly配置指南</title>
     <url>/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><ul>
@@ -132,186 +63,8 @@
       </categories>
       <tags>
         <tag>blog</tag>
-        <tag>butterfly</tag>
         <tag>配置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文档写累了，写个贪吃蛇玩玩</title>
-    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
-    <content><![CDATA[<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>贪吃蛇WASD版</title>
-<style>
-body{
-    background:#f7f2e9;
-    padding:40px 20px;
-    margin:0;
-    font-family:Georgia,"Times New Roman",serif;
-    color:#3a2e24;
-}
-.wrap{
-    width:608px;
-    margin:0 auto;
-}
-h2{
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:1px;
-    margin-bottom:12px;
-}
-canvas {
-    border:2px solid #b8956a;
-    border-radius:4px;
-    background:#f0e6d2;
-    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-<h2>🐍贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
-<canvas id="snakeCanvas" width="608" height="608"></canvas>
-</div>
-
-<script>
-const canvas = document.getElementById('snakeCanvas');
-const ctx = canvas.getContext('2d');
-const size = 32;
-
-function resetGame(){
-    snake = [{x:8,y:8}];
-    spawnFood();
-    dir = {x:1, y:0};
-    nextDir = {x:1, y:0};
-    gameOver = false;
-}
-
-let snake = [{x:8,y:8}];
-let food = {x:10,y:9};
-let dir = {x:1, y:0};
-let nextDir = {x:1, y:0};
-let gameOver = false;
-
-const gridW = 19;
-const gridH = 19;
-
-function spawnFood(){
-    let newFood;
-    while(true){
-        let rx = Math.floor(Math.random() * gridW);
-        let ry = Math.floor(Math.random() * gridH);
-        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
-        if(!onSnake){
-            newFood = {x:rx,y:ry};
-            break;
-        }
-    }
-    food = newFood;
-}
-
-function draw() {
-    ctx.fillStyle = "#f0e6d2";
-    ctx.fillRect(0, 0, 608, 608);
-
-    // 食物：暖金色
-    ctx.fillStyle = "#d4a056";
-    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
-
-    // 蛇：墨绿色
-    ctx.fillStyle = "#4a6f53";
-    for(let i = 0; i < snake.length; i++){
-        let p = snake[i];
-        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
-    }
-
-    // 蛇头稍微亮一点
-    if(!gameOver && snake.length > 0){
-        let head = snake[0];
-        ctx.fillStyle = "#5d8967";
-        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
-    }
-
-    if(gameOver){
-        ctx.fillStyle = "#3a2e24";
-        ctx.font = "36px Georgia, serif";
-        ctx.textAlign = "center";
-        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
-    }
-}
-
-function tick() {
-    if(gameOver) return;
-    dir = {...nextDir};
-    let head = {
-        x: snake[0].x + dir.x,
-        y: snake[0].y + dir.y
-    };
-
-    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
-        gameOver = true;
-        draw();
-        return;
-    }
-
-    for(let i=0;i<snake.length;i++){
-        if(head.x === snake[i].x && head.y === snake[i].y){
-            gameOver = true;
-            draw();
-            return;
-        }
-    }
-
-    snake.unshift(head);
-    if(head.x === food.x && head.y === food.y){
-        spawnFood();
-    }else{
-        snake.pop();
-    }
-
-    draw();
-}
-
-document.onkeydown = function(e){
-    let key = e.key;
-
-    if(key === 'r' || key === 'R'){
-        resetGame();
-        return;
-    }
-
-    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
-    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
-    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
-    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
-
-    if(key === "w" || key === "W"){
-        if(dir.y !==1) nextDir = {x:0,y:-1};
-    }
-    if(key === "s" || key === "S"){
-        if(dir.y !==-1) nextDir = {x:0,y:1};
-    }
-    if(key === "a" || key === "A"){
-        if(dir.x !==1) nextDir = {x:-1,y:0};
-    }
-    if(key === "d" || key === "D"){
-        if(dir.x !==-1) nextDir = {x:1,y:0};
-    }
-};
-
-resetGame();
-setInterval(tick,150);
-</script>
-</body>
-</html>]]></content>
-      <categories>
-        <category>一点小把戏</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>整活</tag>
+        <tag>butterfly</tag>
       </tags>
   </entry>
   <entry>
@@ -407,6 +160,233 @@ setInterval(tick,150);
       </tags>
   </entry>
   <entry>
+    <title>文档写累了，写个贪吃蛇玩玩</title>
+    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>贪吃蛇WASD版</title>
+<style>
+body{
+    background:#f7f2e9;
+    padding:40px 20px;
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#3a2e24;
+}
+.wrap{
+    width:608px;
+    margin:0 auto;
+}
+h2{
+    text-align:center;
+    font-weight:normal;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+canvas {
+    border:2px solid #b8956a;
+    border-radius:4px;
+    background:#f0e6d2;
+    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h2>贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
+<canvas id="snakeCanvas" width="608" height="608"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById('snakeCanvas');
+const ctx = canvas.getContext('2d');
+const size = 32;
+
+let autoPlay = false;
+
+function resetGame(){
+    snake = [{x:8,y:8}];
+    spawnFood();
+    dir = {x:1, y:0};
+    nextDir = {x:1, y:0};
+    gameOver = false;
+    autoPlay = false;
+}
+
+let snake = [{x:8,y:8}];
+let food = {x:10,y:9};
+let dir = {x:1, y:0};
+let nextDir = {x:1, y:0};
+let gameOver = false;
+
+const gridW = 19;
+const gridH = 19;
+
+function spawnFood(){
+    let newFood;
+    while(true){
+        let rx = Math.floor(Math.random() * gridW);
+        let ry = Math.floor(Math.random() * gridH);
+        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
+        if(!onSnake){
+            newFood = {x:rx,y:ry};
+            break;
+        }
+    }
+    food = newFood;
+}
+
+// BFS广度优先寻路，返回第一步方向，无路返回null
+function bfsFindPath(start, target, snakeBody){
+    const dirs = [ {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1} ];
+    const visited = new Set();
+    const queue = [];
+    queue.push({x:start.x, y:start.y, path:[]});
+    visited.add(`${start.x},${start.y}`);
+
+    while(queue.length>0){
+        const cur = queue.shift();
+        if(cur.x === target.x && cur.y === target.y){
+            return cur.path.length>0 ? cur.path[0] : null;
+        }
+        for(const d of dirs){
+            const nx = cur.x + d.x;
+            const ny = cur.y + d.y;
+            const key = `${nx},${ny}`;
+            //边界、蛇身、已访问过滤
+            if(nx>=0 && nx<gridW && ny>=0 && ny<gridH
+                && !visited.has(key)
+                && !snakeBody.some(s=>s.x===nx&&s.y===ny)){
+                visited.add(key);
+                const newPath = [...cur.path, d];
+                queue.push({x:nx,y:ny,path:newPath});
+            }
+        }
+    }
+    return null;
+}
+
+function aiAutoMove(){
+    if(gameOver) return;
+    const head = snake[0];
+    const firstStep = bfsFindPath(head, food, snake);
+    if(firstStep){
+        nextDir = firstStep;
+    }
+}
+
+function draw() {
+    ctx.fillStyle = "#f0e6d2";
+    ctx.fillRect(0, 0, 608, 608);
+
+    ctx.fillStyle = "#d4a056";
+    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
+
+    ctx.fillStyle = "#4a6f53";
+    for(let i = 0; i < snake.length; i++){
+        let p = snake[i];
+        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
+    }
+
+    if(!gameOver && snake.length > 0){
+        let head = snake[0];
+        ctx.fillStyle = "#5d8967";
+        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
+    }
+
+    if(gameOver){
+        ctx.fillStyle = "#3a2e24";
+        ctx.font = "36px Georgia, serif";
+        ctx.textAlign = "center";
+        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
+    }
+}
+
+function tick() {
+    if(gameOver) return;
+
+    if(autoPlay){
+        aiAutoMove();
+    }
+
+    dir = {...nextDir};
+    let head = {
+        x: snake[0].x + dir.x,
+        y: snake[0].y + dir.y
+    };
+
+    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
+        gameOver = true;
+        draw();
+        return;
+    }
+
+    for(let i=0;i<snake.length;i++){
+        if(head.x === snake[i].x && head.y === snake[i].y){
+            gameOver = true;
+            draw();
+            return;
+        }
+    }
+
+    snake.unshift(head);
+    if(head.x === food.x && head.y === food.y){
+        spawnFood();
+    }else{
+        snake.pop();
+    }
+
+    draw();
+}
+
+document.onkeydown = function(e){
+    let key = e.key;
+
+    if(key === 'p' || key === 'P'){
+        autoPlay = !autoPlay;
+        return;
+    }
+
+    if(key === 'r' || key === 'R'){
+        resetGame();
+        return;
+    }
+
+    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
+    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
+    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
+    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
+
+    if(key === "w" || key === "W"){
+        if(dir.y !==1) nextDir = {x:0,y:-1};
+    }
+    if(key === "s" || key === "S"){
+        if(dir.y !==-1) nextDir = {x:0,y:1};
+    }
+    if(key === "a" || key === "A"){
+        if(dir.x !==1) nextDir = {x:-1,y:0};
+    }
+    if(key === "d" || key === "D"){
+        if(dir.x !==-1) nextDir = {x:1,y:0};
+    }
+};
+
+resetGame();
+setInterval(tick,150);
+</script>
+</body>
+</html>]]></content>
+      <categories>
+        <category>一点小把戏</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>整活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo常用指令</title>
     <url>/2026/08/23/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="基础核心命令"><a href="#基础核心命令" class="headerlink" title="基础核心命令"></a>基础核心命令</h2><ul>
@@ -456,6 +436,75 @@ setInterval(tick,150);
       <tags>
         <tag>Hexo</tag>
         <tag>水贴</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>butterfly功能扩展</title>
+    <url>/2026/08/24/butterfly%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/</url>
+    <content><![CDATA[<h2 id="评论功能扩展"><a href="#评论功能扩展" class="headerlink" title="评论功能扩展"></a>评论功能扩展</h2><ol>
+<li>解锁 GitHub 评论功能</li>
+</ol>
+<ul>
+<li>进入对应仓库的设置页面</li>
+<li>勾选 <code>Discussions</code> 选项</li>
+<li>侧边栏选择 <code>GitHub Apps</code></li>
+<li>安装 <code>giscus</code> 应用</li>
+</ul>
+<ol start="2">
+<li>配置 <code>Giscus</code></li>
+</ol>
+<ul>
+<li>访问 <a href="https://giscus.app/">Giscus</a> 官方网站</li>
+<li>选择对应的语言</li>
+<li>填入对应的仓库</li>
+<li>映射关系选择第一个 <code>pathname</code></li>
+<li>分类选择 <code>Announcement</code></li>
+<li>其他选择默认即可，最后启用giscus下面会生成一个 <code>&lt;script&gt;</code> 标签</li>
+<li>配置 <code>_config.butterfly.yml</code> 中的 <code>giscus</code> 配置信息<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">Giscus</span>  <span class="comment"># 启用 Giscus 评论功能</span></span><br><span class="line">  <span class="attr">text:</span> <span class="literal">true</span>   <span class="comment"># 启用文本评论</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span> <span class="comment"># 启用懒加载评论</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">false</span>   <span class="comment"># 启用评论数量统计</span></span><br><span class="line">  <span class="attr">card_post_count:</span> <span class="literal">false</span> <span class="comment"># 启用卡片评论数量统计</span></span><br><span class="line"></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">yourname/yourrepo</span> <span class="comment"># 填写script标签中的 data-repo 值</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="string">your_repo_id</span>   <span class="comment"># 填写script标签中的 data-repo-id 值</span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="string">your_category_id</span> <span class="comment"># 填写script标签中的 data-category-id 值</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">      <span class="attr">light:</span> <span class="string">light</span></span><br><span class="line">      <span class="attr">dark:</span> <span class="string">dark</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">      <span class="attr">mapping:</span> <span class="string">pathname</span> <span class="comment"># 填写script标签中的 data-mapping 值</span></span><br><span class="line">      <span class="attr">strict:</span> <span class="number">0</span> <span class="comment"># 填写script标签中的 data-strict 值</span></span><br><span class="line">      <span class="attr">reactions-enabled:</span> <span class="number">1</span> <span class="comment"># 填写script标签中的 data-reactions-enabled 值</span></span><br><span class="line">      <span class="attr">emit-metadata:</span> <span class="number">0</span> <span class="comment"># 填写script标签中的 data-emit-metadata 值</span></span><br><span class="line">      <span class="attr">input-position:</span> <span class="string">bottom</span> <span class="comment"># 填写script标签中的 data-input-position 值</span></span><br><span class="line">      <span class="attr">lang:</span> <span class="string">zh-CN</span> <span class="comment"># 填写script标签中的 data-lang 值</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>验证 Giscus 评论功能</li>
+</ol>
+<ul>
+<li>访问博客</li>
+<li>查看评论功能是否正常</li>
+<li>如果正常，说明 Giscus 评论功能配置成功</li>
+<li>如果不正常，说明 Giscus 评论功能配置失败</li>
+</ul>
+<h2 id="搜索功能扩展"><a href="#搜索功能扩展" class="headerlink" title="搜索功能扩展"></a>搜索功能扩展</h2><ol>
+<li>安装搜索插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></li>
+<li>配置 <code>_config.yml</code> ,在末尾加入以下内容<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure></li>
+<li>配置 <code>_config.butterfly.yml</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">local_search</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">搜索</span></span><br><span class="line"></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">CDN:</span></span><br></pre></td></tr></table></figure></li>
+<li>验证搜索功能</li>
+</ol>
+<ul>
+<li>访问博客</li>
+<li>查看搜索功能是否正常</li>
+<li>如果正常，说明搜索功能配置成功</li>
+<li>如果不正常，说明搜索功能配置失败</li>
+</ul>
+<h2 id="自定义美化"><a href="#自定义美化" class="headerlink" title="自定义美化"></a>自定义美化</h2><ol>
+<li><code>source</code> 中新建 <code>css\custom.css</code> 文件和 <code>js\custom.js</code> 文件</li>
+<li>配置 <code>_config.butterfly.yml</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line"><span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/custom.css&quot;&gt;</span></span><br><span class="line"><span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/custom.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>接下来就可以尝试在这两个文件中添加自定义的样式和脚本了</li>
+</ol>
+<h2 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h2><ol>
+<li>评论功能或搜索功能配置失败<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+<li>搜索按钮点击后没有反应</li>
+</ol>
+<ul>
+<li>严格检查两个配置文件的相关内容，可能是一些细节输入有误</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术文档</category>
+      </categories>
+      <tags>
+        <tag>butterfly</tag>
+        <tag>功能扩展</tag>
+        <tag>评论</tag>
+        <tag>搜索</tag>
+        <tag>自定义美化</tag>
       </tags>
   </entry>
 </search>
