@@ -1,0 +1,15 @@
+/* 首页标题阴影，让浅色背景下文字更清楚 */
+#page-header #site-title,
+#page-header #site-subtitle {
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
+/* 文章卡片悬浮时更有层次，但不过度跳动 */
+#recent-posts > .recent-post-item {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(32, 42, 68, 0.14);
+}
