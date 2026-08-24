@@ -9,7 +9,7 @@
   <link href="https://youlixsecco.online/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, secco</rights>
   <title>Secco</title>
-  <updated>2026-08-24T07:00:42.519Z</updated>
+  <updated>2026-08-24T07:12:38.616Z</updated>
   <entry>
     <author>
       <name>secco</name>
@@ -29,7 +29,7 @@
       <![CDATA[<h4 id="转移-Linux-上的-blog-项目到-Windows"><a href="#转移-Linux-上的-blog-项目到-Windows" class="headerlink" title="转移 Linux 上的 blog 项目到 Windows"></a>转移]]>
     </summary>
     <title>blog从Linux迁移至Windows</title>
-    <updated>2026-08-24T07:00:42.519Z</updated>
+    <updated>2026-08-24T07:12:38.616Z</updated>
   </entry>
   <entry>
     <author>
@@ -56,8 +56,8 @@
       <name>secco</name>
     </author>
     <category term="技术文档" scheme="https://youlixsecco.online/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
-    <category term="Hexo" scheme="https://youlixsecco.online/tags/Hexo/"/>
     <category term="博客搭建" scheme="https://youlixsecco.online/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="Hexo" scheme="https://youlixsecco.online/tags/Hexo/"/>
     <category term="Butterfly" scheme="https://youlixsecco.online/tags/Butterfly/"/>
     <category term="GitHubPages" scheme="https://youlixsecco.online/tags/GitHubPages/"/>
     <content>
