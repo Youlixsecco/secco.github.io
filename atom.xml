@@ -9,7 +9,28 @@
   <link href="https://youlixsecco.online/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, secco</rights>
   <title>Secco</title>
-  <updated>2026-08-24T05:58:34.842Z</updated>
+  <updated>2026-08-24T06:40:54.202Z</updated>
+  <entry>
+    <author>
+      <name>secco</name>
+    </author>
+    <category term="技术文档" scheme="https://youlixsecco.online/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    <category term="blog" scheme="https://youlixsecco.online/tags/blog/"/>
+    <category term="迁移" scheme="https://youlixsecco.online/tags/%E8%BF%81%E7%A7%BB/"/>
+    <category term="Windows" scheme="https://youlixsecco.online/tags/Windows/"/>
+    <category term="Linux" scheme="https://youlixsecco.online/tags/Linux/"/>
+    <content>
+      <![CDATA[<h4 id="转移-Linux-上的-blog-项目到-Windows"><a href="#转移-Linux-上的-blog-项目到-Windows" class="headerlink" title="转移 Linux 上的 blog 项目到 Windows"></a>转移 Linux 上的 blog 项目到 Windows</h4><ol><li>初始化 Git<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></li><li>添加远程仓库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:用户名/仓库名.git</span><br></pre></td></tr></table></figure></li><li>添加文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></li><li>提交文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;初始提交&quot;</span></span><br></pre></td></tr></table></figure></li><li>推送文件到远程仓库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin 主分支名</span><br></pre></td></tr></table></figure></li><li>在 Windows 上拉取备份的 blog 项目<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:用户名/仓库名.git</span><br></pre></td></tr></table></figure></li></ol><h4 id="配置-Windows-上的-blog-项目"><a href="#配置-Windows-上的-blog-项目" class="headerlink" title="配置 Windows 上的 blog 项目"></a>配置 Windows 上的 blog 项目</h4><ol><li>安装 <a href="https://nodejs.org/en/download">Node.js</a></li><li>验证 Node.js 安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li><li>安装 hexo<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></li><li>验证 hexo 安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li><li>拉取 blog 主题，这里是 butterfly 主题<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure></li><li>安装依赖<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></li><li>预览迁移后的 blog 项目<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>访问 <a href="http://localhost:4000/">http://localhost:4000</a> 即可查看迁移后的 blog 项目</li></ol>]]>
+    </content>
+    <id>https://youlixsecco.online/2026/08/24/blog%E4%BB%8ELinux%E8%BF%81%E7%A7%BB%E8%87%B3Windows/</id>
+    <link href="https://youlixsecco.online/2026/08/24/blog%E4%BB%8ELinux%E8%BF%81%E7%A7%BB%E8%87%B3Windows/"/>
+    <published>2026-08-24T06:14:11.000Z</published>
+    <summary>
+      <![CDATA[<h4 id="转移-Linux-上的-blog-项目到-Windows"><a href="#转移-Linux-上的-blog-项目到-Windows" class="headerlink" title="转移 Linux 上的 blog 项目到 Windows"></a>转移]]>
+    </summary>
+    <title>blog从Linux迁移至Windows</title>
+    <updated>2026-08-24T06:40:54.202Z</updated>
+  </entry>
   <entry>
     <author>
       <name>secco</name>
@@ -35,8 +56,8 @@
       <name>secco</name>
     </author>
     <category term="技术文档" scheme="https://youlixsecco.online/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
-    <category term="Hexo" scheme="https://youlixsecco.online/tags/Hexo/"/>
     <category term="博客搭建" scheme="https://youlixsecco.online/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="Hexo" scheme="https://youlixsecco.online/tags/Hexo/"/>
     <category term="Butterfly" scheme="https://youlixsecco.online/tags/Butterfly/"/>
     <category term="GitHubPages" scheme="https://youlixsecco.online/tags/GitHubPages/"/>
     <content>
