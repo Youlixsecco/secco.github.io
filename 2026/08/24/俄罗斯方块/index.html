@@ -1,0 +1,1241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>俄罗斯方块 | Secco</title><meta name="author" content="secco"><meta name="copyright" content="secco"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="PLAYGROUND                                                                  ✦ 下一个                                ✦ 分数         0              重新开局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="俄罗斯方块">
+<meta property="og:url" content="https://youlixsecco.online/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/index.html">
+<meta property="og:site_name" content="Secco">
+<meta property="og:description" content="PLAYGROUND                                                                  ✦ 下一个                                ✦ 分数         0              重新开局">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://youlixsecco.online/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png">
+<meta property="article:published_time" content="2026-08-24T15:44:28.000Z">
+<meta property="article:modified_time" content="2026-08-24T16:32:08.647Z">
+<meta property="article:author" content="secco">
+<meta property="article:tag" content="整活">
+<meta property="article:tag" content="游戏">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://youlixsecco.online/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "俄罗斯方块",
+  "url": "https://youlixsecco.online/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/",
+  "image": "https://youlixsecco.online/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png",
+  "datePublished": "2026-08-24T15:44:28.000Z",
+  "dateModified": "2026-08-24T16:32:08.647Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "secco",
+      "url": "https://youlixsecco.online"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/liujiao.png"><link rel="canonical" href="https://youlixsecco.online/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":800,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '俄罗斯方块',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Secco" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/feilinsi.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Secco</span></a><a class="nav-page-title" href="/"><span class="site-name">俄罗斯方块</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">俄罗斯方块</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-08-24T15:44:28.000Z" title="发表于 2026-08-24 23:44:28">2026-08-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-24T16:32:08.647Z" title="更新于 2026-08-25 00:32:08">2026-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%80%E7%82%B9%E5%B0%8F%E6%8A%8A%E6%88%8F/">一点小把戏</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container">
+<div id="tetris-app">
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <div class="game-container">
+    <div class="board-section">
+      <div class="board-header">
+        <span class="status-dot"></span>
+        <span class="board-title">PLAYGROUND</span>
+        <span class="status-dot"></span>
+      </div>
+      <div class="canvas-wrapper">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <div class="glass-card next-box">
+        <div class="card-label">✦ 下一个</div>
+        <canvas id="nextCanvas" width="120" height="120"></canvas>
+      </div>
+      <div class="glass-card score-box">
+        <div class="card-label">✦ 分数</div>
+        <div class="score-value" id="scoreDisplay">0</div>
+      </div>
+      <button class="btn btn-restart" id="restartBtn">重新开局</button>
+      <div class="key-hints">
+        <div class="key-item">
+          <span class="key-label">移动</span>
+          <span class="key-keys"><kbd>A</kbd><kbd>D</kbd></span>
+        </div>
+        <div class="key-item">
+          <span class="key-label">旋转</span>
+          <span class="key-keys"><kbd>W</kbd></span>
+        </div>
+        <div class="key-item">
+          <span class="key-label">加速</span>
+          <span class="key-keys"><kbd>S</kbd></span>
+        </div>
+        <div class="key-item">
+          <span class="key-label">落底</span>
+          <span class="key-keys"><kbd>空格</kbd></span>
+        </div>
+        <div class="hint-extra">方向键同样适用</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #tetris-app {
+    all: initial;
+    display: block;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    padding: 24px 16px;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+  #tetris-app * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+  #tetris-app .ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #tetris-app .ambient-glow-1 {
+    width: 400px;
+    height: 400px;
+    background: #4f46e5;
+    top: -100px;
+    left: -100px;
+  }
+  #tetris-app .ambient-glow-2 {
+    width: 500px;
+    height: 500px;
+    background: #0ea5e9;
+    bottom: -150px;
+    right: -150px;
+    opacity: 0.2;
+  }
+
+  #tetris-app .game-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: rgba(18, 22, 36, 0.75);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 40px;
+    padding: 32px 36px;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.03) inset, 0 0 60px rgba(79, 70, 229, 0.05);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #tetris-app .board-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  #tetris-app .board-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+  #tetris-app .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 12px #4ade8066;
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  #tetris-app .canvas-wrapper {
+    border-radius: 24px;
+    background: #0b0d17;
+    padding: 8px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+  }
+  #tetris-app #gameCanvas {
+    display: block;
+    width: 300px;
+    height: 600px;
+    border-radius: 16px;
+    background: #0f111e;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+  }
+
+  #tetris-app .info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 160px;
+    max-width: 180px;
+  }
+
+  #tetris-app .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 20px 16px 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s;
+  }
+  #tetris-app .glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  #tetris-app .card-label {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  #tetris-app #nextCanvas {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+  }
+
+  #tetris-app .score-value {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(251, 191, 36, 0.15);
+    line-height: 1.2;
+  }
+
+  #tetris-app .btn {
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+    padding: 14px 0;
+    width: 100%;
+  }
+  #tetris-app .btn-restart {
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+    border: none;
+  }
+  #tetris-app .btn-restart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, #b49cfc, #9b6ffa);
+  }
+  #tetris-app .btn-restart:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  }
+
+  #tetris-app .key-hints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  #tetris-app .key-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 6px 4px;
+    transition: background 0.2s;
+  }
+  #tetris-app .key-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  #tetris-app .key-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  #tetris-app .key-keys {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #tetris-app .key-keys kbd {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 24px;
+    min-width: 28px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  #tetris-app .hint-extra {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.15);
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 780px) {
+    #tetris-app .game-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      gap: 28px;
+      border-radius: 32px;
+    }
+    #tetris-app .info-panel {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: unset;
+      max-width: 100%;
+      width: 100%;
+    }
+    #tetris-app .info-panel > * {
+      flex: 1;
+      min-width: 120px;
+      max-width: 180px;
+    }
+    #tetris-app .key-hints {
+      flex: 1 1 100%;
+      max-width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+    #tetris-app #gameCanvas {
+      width: 240px;
+      height: 480px;
+    }
+    #tetris-app #nextCanvas {
+      width: 96px;
+      height: 96px;
+    }
+    #tetris-app .score-value {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #tetris-app .game-container {
+      padding: 16px;
+      gap: 20px;
+    }
+    #tetris-app #gameCanvas {
+      width: 200px;
+      height: 400px;
+    }
+    #tetris-app .info-panel > * {
+      min-width: 80px;
+      max-width: 140px;
+    }
+    #tetris-app .glass-card {
+      padding: 14px 12px;
+    }
+    #tetris-app .score-value {
+      font-size: 26px;
+    }
+    #tetris-app .board-header {
+      font-size: 9px;
+      letter-spacing: 4px;
+    }
+    #tetris-app .key-hints {
+      padding: 8px 6px;
+      gap: 6px;
+    }
+    #tetris-app .key-item {
+      padding: 4px 2px;
+    }
+    #tetris-app .key-keys kbd {
+      font-size: 10px;
+      padding: 1px 6px;
+      min-width: 22px;
+      line-height: 20px;
+    }
+  }
+</style>
+
+<script>
+  (function(){
+    // ============================================================
+    //  固定方块统一颜色（可自定义）
+    // ============================================================
+    const FIXED_COLOR = '#a78bfa'; // 淡紫色，与按钮呼应
+
+    // 其余核心逻辑
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const nextCanvas = document.getElementById('nextCanvas');
+    const nextCtx = nextCanvas.getContext('2d');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+
+    const COLS = 10, ROWS = 20, BLOCK_SIZE = 30, NEXT_BLOCK_SIZE = 24;
+
+    const PIECES = [
+      { shape: [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]], color: '#3cc7f2' },
+      { shape: [[1,1],[1,1]], color: '#f7e476' },
+      { shape: [[0,1,0],[1,1,1],[0,0,0]], color: '#b484e0' },
+      { shape: [[0,1,1],[1,1,0],[0,0,0]], color: '#6fcf97' },
+      { shape: [[1,1,0],[0,1,1],[0,0,0]], color: '#e66767' },
+      { shape: [[1,0,0],[1,1,1],[0,0,0]], color: '#5a7d9c' },
+      { shape: [[0,0,1],[1,1,1],[0,0,0]], color: '#f5a97f' }
+    ];
+
+    let board = [], currentPiece = null, nextPiece = null, score = 0, gameOver = false;
+    let dropInterval = 480, lastDropTime = 0, animationId = null, gameRunning = false;
+
+    function initBoard(){ board = Array.from({length:ROWS}, ()=>Array(COLS).fill(null)); }
+    function getRandomPiece(){
+      const idx = Math.floor(Math.random() * PIECES.length);
+      const p = PIECES[idx];
+      return { shape: p.shape.map(row => [...row]), color: p.color, x: Math.floor((COLS - p.shape[0].length)/2), y: 0 };
+    }
+    function isValid(shape, offX, offY){
+      for(let r=0; r<shape.length; r++) for(let c=0; c<shape[r].length; c++) if(shape[r][c]){
+        const bx = offX + c, by = offY + r;
+        if(bx < 0 || bx >= COLS || by >= ROWS || by < 0) return false;
+        if(by >= 0 && board[by][bx] !== null) return false;
+      } return true;
+    }
+    function spawnNewPiece(){
+      if(!nextPiece) nextPiece = getRandomPiece();
+      currentPiece = { shape: nextPiece.shape.map(row=>[...row]), color: nextPiece.color, x: Math.floor((COLS - nextPiece.shape[0].length)/2), y: 0 };
+      nextPiece = getRandomPiece();
+      if(!isValid(currentPiece.shape, currentPiece.x, currentPiece.y)){ gameOver = true; gameRunning = false; currentPiece = null; }
+    }
+    function lockPiece(){
+      if(!currentPiece) return;
+      const { shape, x, y } = currentPiece;
+      // 关键改动：固定方块统一使用 FIXED_COLOR
+      for(let r=0; r<shape.length; r++) for(let c=0; c<shape[r].length; c++) if(shape[r][c]){
+        const bx = x + c, by = y + r;
+        if(by >= 0 && by < ROWS && bx >= 0 && bx < COLS) board[by][bx] = FIXED_COLOR;
+      }
+      let cleared = 0;
+      for(let r=ROWS-1; r>=0; ){ if(board[r].every(cell => cell !== null)){ board.splice(r,1); board.unshift(Array(COLS).fill(null)); cleared++; } else r--; }
+      if(cleared){ const pts = [0,100,300,500,800]; score += pts[Math.min(cleared,4)] || 0; scoreDisplay.textContent = score; }
+      spawnNewPiece();
+      render();
+      if(gameOver){ gameRunning = false; render(); }
+    }
+
+    function drawBlock(context, bx, by, color, size){
+      const s = size || BLOCK_SIZE;
+      const x = bx * s, y = by * s;
+      const r = 3;
+      context.shadowColor = 'rgba(255,255,255,0.05)';
+      context.shadowBlur = 8;
+      context.beginPath();
+      context.moveTo(x + r, y);
+      context.lineTo(x + s - r, y);
+      context.quadraticCurveTo(x + s, y, x + s, y + r);
+      context.lineTo(x + s, y + s - r);
+      context.quadraticCurveTo(x + s, y + s, x + s - r, y + s);
+      context.lineTo(x + r, y + s);
+      context.quadraticCurveTo(x, y + s, x, y + s - r);
+      context.lineTo(x, y + r);
+      context.quadraticCurveTo(x, y, x + r, y);
+      context.closePath();
+      const grad = context.createLinearGradient(x, y, x + s, y + s);
+      grad.addColorStop(0, color);
+      grad.addColorStop(1, color);
+      context.fillStyle = grad;
+      context.fill();
+      context.shadowBlur = 0;
+      context.fillStyle = 'rgba(255,255,255,0.15)';
+      context.fillRect(x + 4, y + 3, s - 10, 2);
+      context.fillRect(x + 3, y + 4, 2, s - 10);
+    }
+
+    function render(){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = 'rgba(255,255,255,0.02)';
+      ctx.lineWidth = 0.5;
+      for(let r=0; r<=ROWS; r++){ ctx.beginPath(); ctx.moveTo(0, r*BLOCK_SIZE); ctx.lineTo(canvas.width, r*BLOCK_SIZE); ctx.stroke(); }
+      for(let c=0; c<=COLS; c++){ ctx.beginPath(); ctx.moveTo(c*BLOCK_SIZE, 0); ctx.lineTo(c*BLOCK_SIZE, canvas.height); ctx.stroke(); }
+
+      for(let r=0; r<ROWS; r++) for(let c=0; c<COLS; c++) if(board[r][c]) drawBlock(ctx, c, r, board[r][c], BLOCK_SIZE);
+      if(currentPiece && !gameOver){
+        const { shape, x, y, color } = currentPiece;
+        for(let r=0; r<shape.length; r++) for(let c=0; c<shape[r].length; c++) if(shape[r][c]){
+          const bx = x + c, by = y + r;
+          if(by >= 0) drawBlock(ctx, bx, by, color, BLOCK_SIZE);
+        }
+      }
+      if(gameOver){
+        ctx.fillStyle = 'rgba(0,0,0,0.7)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#fca5a5';
+        ctx.font = 'bold 32px "Inter", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('游戏结束', canvas.width/2, canvas.height/2 - 8);
+        ctx.fillStyle = 'rgba(255,255,255,0.3)';
+        ctx.font = '14px "Inter", sans-serif';
+        ctx.fillText('点击「重新开局」', canvas.width/2, canvas.height/2 + 40);
+      }
+
+      nextCtx.clearRect(0, 0, nextCanvas.width, nextCanvas.height);
+      if(nextPiece){
+        const shape = nextPiece.shape, color = nextPiece.color;
+        const rows = shape.length, cols = shape[0].length;
+        const ox = (nextCanvas.width - cols * NEXT_BLOCK_SIZE) / 2;
+        const oy = (nextCanvas.height - rows * NEXT_BLOCK_SIZE) / 2;
+        for(let r=0; r<rows; r++) for(let c=0; c<cols; c++) if(shape[r][c]){
+          const x = ox + c * NEXT_BLOCK_SIZE, y = oy + r * NEXT_BLOCK_SIZE;
+          const s = NEXT_BLOCK_SIZE;
+          nextCtx.shadowColor = 'rgba(255,255,255,0.05)';
+          nextCtx.shadowBlur = 6;
+          nextCtx.fillStyle = color;
+          nextCtx.beginPath();
+          nextCtx.roundRect(x, y, s-1, s-1, 2);
+          nextCtx.fill();
+          nextCtx.shadowBlur = 0;
+          nextCtx.fillStyle = 'rgba(255,255,255,0.12)';
+          nextCtx.fillRect(x + 3, y + 2, s - 8, 2);
+          nextCtx.fillRect(x + 2, y + 3, 2, s - 8);
+        }
+      }
+    }
+
+    if (!CanvasRenderingContext2D.prototype.roundRect) {
+      CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, radii) {
+        const r = typeof radii === 'number' ? radii : (radii || 0);
+        this.moveTo(x + r, y);
+        this.lineTo(x + w - r, y);
+        this.quadraticCurveTo(x + w, y, x + w, y + r);
+        this.lineTo(x + w, y + h - r);
+        this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        this.lineTo(x + r, y + h);
+        this.quadraticCurveTo(x, y + h, x, y + h - r);
+        this.lineTo(x, y + r);
+        this.quadraticCurveTo(x, y, x + r, y);
+        return this;
+      };
+    }
+
+    function moveLeft(){ if(currentPiece && !gameOver && gameRunning && isValid(currentPiece.shape, currentPiece.x-1, currentPiece.y)){ currentPiece.x--; render(); } }
+    function moveRight(){ if(currentPiece && !gameOver && gameRunning && isValid(currentPiece.shape, currentPiece.x+1, currentPiece.y)){ currentPiece.x++; render(); } }
+    function rotatePiece(){
+      if(!currentPiece || gameOver || !gameRunning) return;
+      const old = currentPiece.shape, n = old.length;
+      const rotated = Array.from({length:n}, ()=>Array(n).fill(0));
+      for(let r=0; r<n; r++) for(let c=0; c<n; c++) rotated[c][n-1-r] = old[r][c];
+      if(isValid(rotated, currentPiece.x, currentPiece.y)) currentPiece.shape = rotated;
+      else if(isValid(rotated, currentPiece.x-1, currentPiece.y)){ currentPiece.shape = rotated; currentPiece.x--; }
+      else if(isValid(rotated, currentPiece.x+1, currentPiece.y)){ currentPiece.shape = rotated; currentPiece.x++; }
+      render();
+    }
+    function hardDrop(){ if(currentPiece && !gameOver && gameRunning){ while(isValid(currentPiece.shape, currentPiece.x, currentPiece.y+1)) currentPiece.y++; lockPiece(); } }
+
+    function gameLoop(timestamp){
+      if(!gameRunning){ render(); return; }
+      if(timestamp - lastDropTime > dropInterval){
+        if(currentPiece && !gameOver){
+          if(isValid(currentPiece.shape, currentPiece.x, currentPiece.y+1)){ currentPiece.y++; render(); }
+          else { lockPiece(); render(); if(gameOver){ gameRunning=false; render(); return; } }
+        }
+        lastDropTime = timestamp;
+      }
+      render();
+      animationId = requestAnimationFrame(gameLoop);
+    }
+
+    function startGame(){
+      if(animationId) cancelAnimationFrame(animationId);
+      initBoard(); score = 0; scoreDisplay.textContent = '0'; gameOver = false; gameRunning = true;
+      nextPiece = getRandomPiece(); spawnNewPiece();
+      lastDropTime = performance.now();
+      render();
+      animationId = requestAnimationFrame(gameLoop);
+    }
+
+    document.addEventListener('keydown', function(e){
+      const key = e.key;
+      if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Space','w','W','a','A','s','S','d','D'].includes(key) || key === ' '){
+        e.preventDefault();
+      }
+      if(!gameRunning || gameOver) return;
+
+      switch(key){
+        case 'ArrowLeft': moveLeft(); break;
+        case 'ArrowRight': moveRight(); break;
+        case 'ArrowUp': rotatePiece(); break;
+        case 'ArrowDown': if(currentPiece && isValid(currentPiece.shape, currentPiece.x, currentPiece.y+1)){ currentPiece.y++; render(); } break;
+        case ' ': case 'Space': hardDrop(); break;
+      }
+      switch(key.toLowerCase()){
+        case 'a': moveLeft(); break;
+        case 'd': moveRight(); break;
+        case 'w': rotatePiece(); break;
+        case 's': if(currentPiece && isValid(currentPiece.shape, currentPiece.x, currentPiece.y+1)){ currentPiece.y++; render(); } break;
+      }
+    });
+
+    document.getElementById('restartBtn').addEventListener('click', startGame);
+    startGame();
+  })();
+</script>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://youlixsecco.online">secco</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://youlixsecco.online/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/">https://youlixsecco.online/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://youlixsecco.online" target="_blank">Secco</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a><a class="post-meta__tags" href="/tags/%E6%95%B4%E6%B4%BB/">整活</a></div><div class="post-share"><div class="social-share" data-image="/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/" title="文档写累了，写个贪吃蛇玩玩"><img class="cover" src="/img/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/%E9%93%B6%E7%8B%BC.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">文档写累了，写个贪吃蛇玩玩</div></div><div class="info-2"><div class="info-item-1">    贪吃蛇WASD版  body{     background:#f7f2e9;     padding:40px 20px;     margin:0;     font-family:Georgia,"Times New Roman",serif;     color:#3a2e24; } .wrap{     width:608px;     margin:0 auto; } h2{     text-align:center;     font-weight:normal;     letter-spacing:1px;     margin-bottom:12px; } canvas {     border:2px solid #b8956a;     border-radius:4px;     background:#f0e6d2;     box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08); }     贪吃蛇游戏（WASD / 方向键｜R键重新开始） ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/" title="文档写累了，写个贪吃蛇玩玩"><img class="cover" src="/img/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/%E9%93%B6%E7%8B%BC.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-24</div><div class="info-item-2">文档写累了，写个贪吃蛇玩玩</div></div><div class="info-2"><div class="info-item-1">    贪吃蛇WASD版  body{     background:#f7f2e9;     padding:40px 20px;     margin:0;     font-family:Georgia,"Times New Roman",serif;     color:#3a2e24; } .wrap{     width:608px;     margin:0 auto; } h2{     text-align:center;     font-weight:normal;     letter-spacing:1px;     margin-bottom:12px; } canvas {     border:2px solid #b8956a;     border-radius:4px;     background:#f0e6d2;     box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08); }     贪吃蛇游戏（WASD / 方向键｜R键重新开始） ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/feilinsi.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">secco</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.yuanshen.com"><i></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">哒哒哒哒哒~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/" title="俄罗斯方块"><img src="/img/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%A5%A5%E9%BB%9B%E5%A1%94.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="俄罗斯方块"/></a><div class="content"><a class="title" href="/2026/08/24/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/" title="俄罗斯方块">俄罗斯方块</a><time datetime="2026-08-24T15:44:28.000Z" title="发表于 2026-08-24 23:44:28">2026-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/" title="文档写累了，写个贪吃蛇玩玩"><img src="/img/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/%E9%93%B6%E7%8B%BC.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文档写累了，写个贪吃蛇玩玩"/></a><div class="content"><a class="title" href="/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/" title="文档写累了，写个贪吃蛇玩玩">文档写累了，写个贪吃蛇玩玩</a><time datetime="2026-08-24T14:23:00.000Z" title="发表于 2026-08-24 22:23:00">2026-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/24/butterfly%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/" title="butterfly功能扩展"><img src="/img/butterfly%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/%E9%BB%91%E5%A1%94.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="butterfly功能扩展"/></a><div class="content"><a class="title" href="/2026/08/24/butterfly%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95/" title="butterfly功能扩展">butterfly功能扩展</a><time datetime="2026-08-24T08:59:49.000Z" title="发表于 2026-08-24 16:59:49">2026-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" title="butterfly配置指南"><img src="/img/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="butterfly配置指南"/></a><div class="content"><a class="title" href="/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" title="butterfly配置指南">butterfly配置指南</a><time datetime="2026-08-24T07:21:25.000Z" title="发表于 2026-08-24 15:21:25">2026-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/08/24/blog%E4%BB%8ELinux%E8%BF%81%E7%A7%BB%E8%87%B3Windows/" title="blog从Linux迁移至Windows"><img src="/img/blog%E4%BB%8Elinux%E8%BF%81%E7%A7%BB%E8%87%B3Windows/fufu.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="blog从Linux迁移至Windows"/></a><div class="content"><a class="title" href="/2026/08/24/blog%E4%BB%8ELinux%E8%BF%81%E7%A7%BB%E8%87%B3Windows/" title="blog从Linux迁移至Windows">blog从Linux迁移至Windows</a><time datetime="2026-08-24T06:14:11.000Z" title="发表于 2026-08-24 14:14:11">2026-08-24</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By secco</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"><script>(() => {
+  const parseViewBox = viewBox => {
+    if (!viewBox) return null
+    const parts = viewBox.trim().split(/[\s,]+/).map(n => Number(n))
+    if (parts.length !== 4 || parts.some(n => Number.isNaN(n))) return null
+    return parts
+  }
+
+  const getSvgViewBox = svg => {
+    const attr = parseViewBox(svg.getAttribute('viewBox'))
+    if (attr) return attr
+
+    // Fallback: use bbox to build a viewBox
+    try {
+      const bbox = svg.getBBox()
+      if (bbox && bbox.width && bbox.height) return [bbox.x, bbox.y, bbox.width, bbox.height]
+    } catch (e) {
+      // getBBox may fail on some edge cases; ignore
+    }
+
+    const w = Number(svg.getAttribute('width')) || 0
+    const h = Number(svg.getAttribute('height')) || 0
+    if (w > 0 && h > 0) return [0, 0, w, h]
+    return [0, 0, 100, 100]
+  }
+
+  const setSvgViewBox = (svg, vb) => {
+    svg.setAttribute('viewBox', `${vb[0]} ${vb[1]} ${vb[2]} ${vb[3]}`)
+  }
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v))
+
+  const openSvgInNewTab = ({ source, initViewBox }) => {
+    const getClonedSvg = () => {
+      if (typeof source === 'string') {
+        const template = document.createElement('template')
+        template.innerHTML = source.trim()
+        const svg = template.content.querySelector('svg')
+        return svg ? svg.cloneNode(true) : null
+      }
+      if (source && typeof source.cloneNode === 'function') {
+        return source.cloneNode(true)
+      }
+      return null
+    }
+
+    const clone = getClonedSvg()
+    if (!clone) return
+    if (initViewBox && initViewBox.length === 4) {
+      clone.setAttribute('viewBox', initViewBox.join(' '))
+    }
+    if (!clone.getAttribute('xmlns')) clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+    if (!clone.getAttribute('xmlns:xlink') && clone.innerHTML.includes('xlink:')) {
+      clone.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+    }
+    // inject background to match current theme
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark'
+    const bg = getComputedStyle(document.body).backgroundColor || (isDark ? '#1e1e1e' : '#ffffff')
+    if (!clone.style.background) clone.style.background = bg
+
+    const serializer = new XMLSerializer()
+    const svgSource = serializer.serializeToString(clone)
+    const htmlSource = `<!doctype html><html><head><meta charset="utf-8" />
+      <style>
+        html, body { width: 100%; height: 100%; margin: 0; display: flex; align-items: center; justify-content: center; background: ${bg}; }
+        svg { max-width: 100%; max-height: 100%; height: auto; width: auto; }
+      </style>
+      </head><body>${svgSource}</body></html>`
+    const blob = new Blob([htmlSource], { type: 'text/html;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    window.open(url, '_blank', 'noopener')
+
+    setTimeout(() => URL.revokeObjectURL(url), 5000)
+  }
+
+  const attachMermaidViewerButton = wrap => {
+    let btn = wrap.querySelector('.mermaid-open-btn')
+    if (!btn) {
+      btn = document.createElement('button')
+      btn.type = 'button'
+      btn.className = 'mermaid-open-btn'
+      wrap.appendChild(btn)
+    }
+
+    btn.innerHTML = '<i class="fa fa-search fa-fw" aria-hidden="true"></i>'
+
+    if (!btn.__mermaidViewerBound) {
+      btn.addEventListener('click', e => {
+        e.preventDefault()
+        e.stopPropagation()
+        const svg = wrap.__mermaidOriginalSvg || wrap.querySelector('svg')
+        if (!svg) return
+        const initViewBox = wrap.__mermaidInitViewBox
+        openSvgInNewTab({ source: svg, initViewBox })
+      })
+      btn.__mermaidViewerBound = true
+    }
+  }
+
+  // Zoom around a point (px, py) in the SVG viewport (in viewBox coordinates)
+  const zoomAtPoint = (vb, factor, px, py) => {
+    const w = vb[2] * factor
+    const h = vb[3] * factor
+    const nx = px - (px - vb[0]) * factor
+    const ny = py - (py - vb[1]) * factor
+    return [nx, ny, w, h]
+  }
+
+  const initMermaidGestures = wrap => {
+    // Clean up previous event listeners and pending frames
+    if (wrap.__mermaidAbortController) {
+      wrap.__mermaidAbortController.abort()
+      if (wrap.__mermaidRafId) cancelAnimationFrame(wrap.__mermaidRafId)
+    }
+    const ac = new AbortController()
+    wrap.__mermaidAbortController = ac
+    const svg = wrap.querySelector('svg')
+    if (!svg) return
+
+    // Ensure viewBox exists so gestures always work
+    const initVb = getSvgViewBox(svg)
+    wrap.__mermaidInitViewBox = initVb
+    wrap.__mermaidCurViewBox = initVb.slice()
+    setSvgViewBox(svg, initVb)
+    // Disable default gestures to prevent scroll chaining and pinch-zoom penetration in Chrome
+    svg.style.touchAction = 'none'
+
+    // Cache BoundingClientRect, throttled on scroll to reduce reflow
+    let cachedRect = svg.getBoundingClientRect()
+    let rectDirty = false
+    const markRectDirty = () => { rectDirty = true }
+    window.addEventListener('resize', markRectDirty, { signal: ac.signal })
+    window.addEventListener('scroll', markRectDirty, { signal: ac.signal, capture: true })
+    const getRect = () => {
+      if (rectDirty) {
+        cachedRect = svg.getBoundingClientRect()
+        rectDirty = false
+      }
+      return cachedRect
+    }
+
+    // Precompute clamp bounds from initial viewBox
+    const minW = initVb[2] * 0.1
+    const maxW = initVb[2] * 10
+    const minH = initVb[3] * 0.1
+    const maxH = initVb[3] * 10
+    const clampVb = vb => {
+      const out = vb.slice()
+      out[2] = clamp(out[2], minW, maxW)
+      out[3] = clamp(out[3], minH, maxH)
+      return out
+    }
+
+    // Throttle DOM updates using requestAnimationFrame
+    let pendingVb = null
+    let rafId = null
+    const applyVb = () => {
+      if (pendingVb) {
+        wrap.__mermaidCurViewBox = pendingVb
+        setSvgViewBox(svg, pendingVb)
+        pendingVb = null
+      }
+      rafId = null
+      wrap.__mermaidRafId = null
+    }
+    const setCurVb = vb => {
+      pendingVb = clampVb(vb)
+      if (!rafId) {
+        rafId = requestAnimationFrame(applyVb)
+        wrap.__mermaidRafId = rafId
+      }
+    }
+
+    const state = {
+      pointers: new Map(),
+      startVb: null,
+      startDist: 0,
+      lastPointerX: 0,
+      lastPointerY: 0
+    }
+
+    const onPointerDown = e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return
+      svg.setPointerCapture(e.pointerId)
+      const curVb = wrap.__mermaidCurViewBox
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      if (state.pointers.size === 1) {
+        state.startVb = curVb.slice()
+        state.lastPointerX = e.clientX
+        state.lastPointerY = e.clientY
+      } else if (state.pointers.size === 2) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        state.startDist = Math.hypot(dx, dy)
+        state.startVb = curVb.slice()
+      }
+    }
+
+    const onPointerMove = e => {
+      if (!state.pointers.has(e.pointerId)) return
+      state.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      if (state.pointers.size === 1 && state.startVb) {
+        const p = state.pointers.values().next().value
+        const dxClient = p.x - state.lastPointerX
+        const dyClient = p.y - state.lastPointerY
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+        const dx = dxClient * (curVb[2] / rect.width)
+        const dy = dyClient * (curVb[3] / rect.height)
+        setCurVb([curVb[0] - dx, curVb[1] - dy, curVb[2], curVb[3]])
+        return
+      }
+      if (state.pointers.size === 2 && state.startVb && state.startDist > 0) {
+        const pts = [...state.pointers.values()]
+        const dx = pts[0].x - pts[1].x
+        const dy = pts[0].y - pts[1].y
+        const dist = Math.hypot(dx, dy)
+        if (!dist) return
+        const factor = state.startDist / dist
+        const cx = (pts[0].x + pts[1].x) / 2
+        const cy = (pts[0].y + pts[1].y) / 2
+        const px = curVb[0] + (cx - rect.left) * (curVb[2] / rect.width)
+        const py = curVb[1] + (cy - rect.top) * (curVb[3] / rect.height)
+        setCurVb(zoomAtPoint(state.startVb, factor, px, py))
+      }
+    }
+
+    const onPointerUpOrCancel = e => {
+      // Release PointerCapture to avoid event capture anomalies
+      if (svg.hasPointerCapture && svg.hasPointerCapture(e.pointerId)) {
+        svg.releasePointerCapture(e.pointerId)
+      }
+      state.pointers.delete(e.pointerId)
+      if (state.pointers.size === 0) {
+        state.startVb = null
+        state.startDist = 0
+      } else if (state.pointers.size === 1) {
+        const p = state.pointers.values().next().value
+        state.lastPointerX = p.x
+        state.lastPointerY = p.y
+      }
+    }
+
+    const onWheel = e => {
+      // Prevent event bubbling from triggering external scroll
+      e.preventDefault()
+      e.stopPropagation()
+      // Normalize deltaY across deltaMode (Chrome uses pixels, Safari uses lines)
+      let delta = e.deltaY
+      if (e.deltaMode === 1) delta *= 16
+      else if (e.deltaMode === 2) delta *= 400
+
+      // Continuous zoom factor: smoother than fixed 1.1/0.9 steps
+      const zoomFactor = Math.pow(1.001, delta)
+
+      const curVb = wrap.__mermaidCurViewBox
+      const rect = getRect()
+      const px = curVb[0] + (e.clientX - rect.left) * (curVb[2] / rect.width)
+      const py = curVb[1] + (e.clientY - rect.top) * (curVb[3] / rect.height)
+      setCurVb(zoomAtPoint(curVb, zoomFactor, px, py))
+    }
+
+    const onDblClick = () => {
+      const init = wrap.__mermaidInitViewBox
+      if (init) setCurVb(init)
+    }
+
+    svg.addEventListener('pointerdown', onPointerDown, { signal: ac.signal })
+    svg.addEventListener('pointermove', onPointerMove, { signal: ac.signal })
+    svg.addEventListener('pointerup', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('pointercancel', onPointerUpOrCancel, { signal: ac.signal })
+    svg.addEventListener('wheel', onWheel, { passive: false, signal: ac.signal })
+    svg.addEventListener('dblclick', onDblClick, { signal: ac.signal })
+  }
+
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      // Clean up event listeners before removing old SVG
+      if (item.__mermaidAbortController) {
+        item.__mermaidAbortController.abort()
+      }
+      const oldSvg = item.querySelector('svg')
+      if (oldSvg) oldSvg.remove()
+      let config = {}
+      try {
+        config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      } catch (e) {
+        console.warn('[mermaid] failed to parse dataset.config:', e)
+      }
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+        if (true) initMermaidGestures(item)
+        item.__mermaidOriginalSvg = svg
+        if (true) attachMermaidViewerButton(item)
+      }
+
+      const handleError = err => {
+        console.error(`[mermaid] render failed for block #${index}:`, err)
+        const errorEl = document.createElement('div')
+        errorEl.className = 'mermaid-error'
+        errorEl.textContent = `Mermaid render error: ${err.message || err}`
+        mermaidSrc.insertAdjacentElement('afterend', errorEl)
+      }
+
+      try {
+        const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+        // mermaid v9 and v10 compatibility
+        if (typeof renderFn === 'string') {
+          renderMermaid(renderFn)
+        } else {
+          renderFn.then(({ svg }) => renderMermaid(svg)).catch(handleError)
+        }
+      } catch (err) {
+        handleError(err)
+      }
+    })
+  }
+
+  const codeToMermaid = $article => {
+    const codeMermaidEle = $article.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    const $article = document.getElementById('article-container')
+    if (!$article) return
+
+    if (false) codeToMermaid($article)
+    const $mermaid = $article.querySelectorAll('.mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid@11.16.0/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"mapping":"pathname","strict":0,"reactions-enable":1,"emit-metadata":0,"input_position":"bottom","lang":"zh-CN"}
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Youlixsecco/secco.github.io',
+      'data-repo-id': 'R_kgDOUAXJoQ',
+      'data-category-id': 'DIC_kwDOUAXJoc4DD7yk',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><script src="js/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
