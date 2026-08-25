@@ -102,29 +102,6 @@
       </tags>
   </entry>
   <entry>
-    <title>个人blog上传图片无法正确加载</title>
-    <url>/2026/08/25/%E4%B8%AA%E4%BA%BAblog%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%AD%A3%E7%A1%AE%E5%8A%A0%E8%BD%BD/</url>
-    <content><![CDATA[<h2 id="一、blog-图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载"><a href="#一、blog-图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载" class="headerlink" title="一、blog 图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载"></a>一、blog 图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载</h2><ol>
-<li>检查图片路径是否正确，写入路径与真实路径有较大可能存在大小写差异</li>
-<li>关闭 <code>git</code> 默认的忽略大小写功能<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
-<li>检查配置是否生效<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.ignorecase</span><br></pre></td></tr></table></figure>
-输出 <code>false</code> 表示配置生效</li>
-<li>重新提交即可恢复正常加载</li>
-</ol>
-<h2 id="二、图片在本地设备可查看，但是本地预览无法正常加载"><a href="#二、图片在本地设备可查看，但是本地预览无法正常加载" class="headerlink" title="二、图片在本地设备可查看，但是本地预览无法正常加载"></a>二、图片在本地设备可查看，但是本地预览无法正常加载</h2><ol>
-<li>开发者上传图片前进行了旋转图片的操作，图片极有可能已经损坏</li>
-<li>将图片回退到旋转前的状态，建议使用 <a href="https://utilitykit.tools/image-rotate-90-180">https://utilitykit.tools/image-rotate-90-180</a> 旋转图片并下载</li>
-</ol>
-]]></content>
-      <categories>
-        <category>避坑指南</category>
-      </categories>
-      <tags>
-        <tag>个人blog</tag>
-        <tag>图片</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>butterfly配置指南</title>
     <url>/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><ul>
@@ -157,6 +134,81 @@
         <tag>blog</tag>
         <tag>butterfly</tag>
         <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人blog上传图片无法正确加载</title>
+    <url>/2026/08/25/%E4%B8%AA%E4%BA%BAblog%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%AD%A3%E7%A1%AE%E5%8A%A0%E8%BD%BD/</url>
+    <content><![CDATA[<h2 id="一、blog-图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载"><a href="#一、blog-图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载" class="headerlink" title="一、blog 图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载"></a>一、blog 图片上传成功，本地预览无问题，但是推送到服务器后图片却无法正常加载</h2><ol>
+<li>检查图片路径是否正确，写入路径与真实路径有较大可能存在大小写差异</li>
+<li>关闭 <code>git</code> 默认的忽略大小写功能<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.ignorecase <span class="literal">false</span></span><br></pre></td></tr></table></figure></li>
+<li>检查配置是否生效<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.ignorecase</span><br></pre></td></tr></table></figure>
+输出 <code>false</code> 表示配置生效</li>
+<li>重新提交即可恢复正常加载</li>
+</ol>
+<h2 id="二、图片在本地设备可查看，但是本地预览无法正常加载"><a href="#二、图片在本地设备可查看，但是本地预览无法正常加载" class="headerlink" title="二、图片在本地设备可查看，但是本地预览无法正常加载"></a>二、图片在本地设备可查看，但是本地预览无法正常加载</h2><ol>
+<li>开发者上传图片前进行了旋转图片的操作，图片极有可能已经损坏</li>
+<li>将图片回退到旋转前的状态，建议使用 <a href="https://utilitykit.tools/image-rotate-90-180">https://utilitykit.tools/image-rotate-90-180</a> 旋转图片并下载</li>
+</ol>
+]]></content>
+      <categories>
+        <category>避坑指南</category>
+      </categories>
+      <tags>
+        <tag>个人blog</tag>
+        <tag>图片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常用指令</title>
+    <url>/2026/08/23/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="基础核心命令"><a href="#基础核心命令" class="headerlink" title="基础核心命令"></a>基础核心命令</h2><ul>
+<li>初始化blog<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
+这会创建一个名为 myblog 的目录，目录下包含博客的所有文件和目录。</li>
+<li>安装依赖<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+这会安装博客的所有依赖，包括主题、插件等。</li>
+<li>新建一篇文章<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;我的第一篇文章&quot;</span></span><br><span class="line">或者简写为</span><br><span class="line">hexo n <span class="string">&quot;我的第一篇文章&quot;</span></span><br></pre></td></tr></table></figure>
+这会在创建的目录下，新建一个名为 “我的第一篇文章.md” 的文件，文件内容为默认的 Hexo 文章模板。</li>
+<li>生成静态页面（public文件夹）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">或者简写为</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+这会在 public 文件夹下生成所有静态页面，包括文章、标签、分类等。</li>
+<li>本地预览服务器<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line">或者简写为</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+这会在启动一个本地服务器，你可以在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a> 查看博客。</li>
+<li>部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">或者简写为</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+这会将本地生成的静态页面部署到远端服务器，包括 GitHub Pages、Netlify 等。</li>
+</ul>
+<h2 id="组合常用命令"><a href="#组合常用命令" class="headerlink" title="组合常用命令"></a>组合常用命令</h2><ul>
+<li>生成并本地预览<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate &amp;&amp; hexo server</span><br></pre></td></tr></table></figure>
+这会先生成静态页面，然后启动本地服务器，你可以在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a> 查看博客。</li>
+<li>生成并部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+这会先生成静态页面，然后部署到远端服务器，包括 GitHub Pages、Netlify 等。</li>
+<li>清理缓存 + 生成静态页面 + 部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+这会先清理缓存，然后生成静态页面，最后部署到远端服务器。</li>
+</ul>
+<h2 id="辅助命令"><a href="#辅助命令" class="headerlink" title="辅助命令"></a>辅助命令</h2><ul>
+<li>清理缓存<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">或者简写为</span><br><span class="line">hexo c</span><br></pre></td></tr></table></figure>
+这会清理 Hexo 缓存，包括临时文件、缓存等。</li>
+<li>草稿文章<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo draft <span class="string">&quot;我的草稿文章&quot;</span></span><br></pre></td></tr></table></figure>
+这会在草稿目录下，新建一个名为 “我的草稿文章.md” 的文件，文件内容为默认的 Hexo 草稿文章模板。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish <span class="string">&quot;我的草稿文章&quot;</span></span><br></pre></td></tr></table></figure>
+这会将草稿文章发布到文章目录下，文件名与草稿文章相同。</li>
+<li>查看版本<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+这会显示 Hexo 的版本号，包括 Node.js、npm、Hexo 等。</li>
+<li>强制刷新，预览时监听文件改动<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --watch</span><br></pre></td></tr></table></figure>
+这会在启动本地服务器时，监听文件改动，当文件改动时，会自动刷新浏览器。</li>
+</ul>
+<h2 id="常见踩坑提示"><a href="#常见踩坑提示" class="headerlink" title="常见踩坑提示"></a>常见踩坑提示</h2><ul>
+<li>hexo d 部署失败：检查 _config.yml 的 deploy 配置，确认安装部署插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>页面不更新，执行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+这会清理 Hexo 缓存，包括临时文件、缓存等。</li>
+<li>本地预览失败，执行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s -p 端口号</span><br></pre></td></tr></table></figure>
+这会在启动本地服务器时，指定端口号，默认端口号为 4000。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术文档</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>水贴</tag>
       </tags>
   </entry>
   <entry>
@@ -245,289 +297,10 @@
         <category>技术文档</category>
       </categories>
       <tags>
-        <tag>博客搭建</tag>
         <tag>Hexo</tag>
+        <tag>博客搭建</tag>
         <tag>Butterfly</tag>
         <tag>GitHubPages</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo常用指令</title>
-    <url>/2026/08/23/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="基础核心命令"><a href="#基础核心命令" class="headerlink" title="基础核心命令"></a>基础核心命令</h2><ul>
-<li>初始化blog<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
-这会创建一个名为 myblog 的目录，目录下包含博客的所有文件和目录。</li>
-<li>安装依赖<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-这会安装博客的所有依赖，包括主题、插件等。</li>
-<li>新建一篇文章<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;我的第一篇文章&quot;</span></span><br><span class="line">或者简写为</span><br><span class="line">hexo n <span class="string">&quot;我的第一篇文章&quot;</span></span><br></pre></td></tr></table></figure>
-这会在创建的目录下，新建一个名为 “我的第一篇文章.md” 的文件，文件内容为默认的 Hexo 文章模板。</li>
-<li>生成静态页面（public文件夹）<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">或者简写为</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-这会在 public 文件夹下生成所有静态页面，包括文章、标签、分类等。</li>
-<li>本地预览服务器<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line">或者简写为</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-这会在启动一个本地服务器，你可以在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a> 查看博客。</li>
-<li>部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">或者简写为</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-这会将本地生成的静态页面部署到远端服务器，包括 GitHub Pages、Netlify 等。</li>
-</ul>
-<h2 id="组合常用命令"><a href="#组合常用命令" class="headerlink" title="组合常用命令"></a>组合常用命令</h2><ul>
-<li>生成并本地预览<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate &amp;&amp; hexo server</span><br></pre></td></tr></table></figure>
-这会先生成静态页面，然后启动本地服务器，你可以在浏览器中访问 <a href="http://localhost:4000/">http://localhost:4000</a> 查看博客。</li>
-<li>生成并部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-这会先生成静态页面，然后部署到远端服务器，包括 GitHub Pages、Netlify 等。</li>
-<li>清理缓存 + 生成静态页面 + 部署到远端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-这会先清理缓存，然后生成静态页面，最后部署到远端服务器。</li>
-</ul>
-<h2 id="辅助命令"><a href="#辅助命令" class="headerlink" title="辅助命令"></a>辅助命令</h2><ul>
-<li>清理缓存<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">或者简写为</span><br><span class="line">hexo c</span><br></pre></td></tr></table></figure>
-这会清理 Hexo 缓存，包括临时文件、缓存等。</li>
-<li>草稿文章<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo draft <span class="string">&quot;我的草稿文章&quot;</span></span><br></pre></td></tr></table></figure>
-这会在草稿目录下，新建一个名为 “我的草稿文章.md” 的文件，文件内容为默认的 Hexo 草稿文章模板。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo publish <span class="string">&quot;我的草稿文章&quot;</span></span><br></pre></td></tr></table></figure>
-这会将草稿文章发布到文章目录下，文件名与草稿文章相同。</li>
-<li>查看版本<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-这会显示 Hexo 的版本号，包括 Node.js、npm、Hexo 等。</li>
-<li>强制刷新，预览时监听文件改动<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --watch</span><br></pre></td></tr></table></figure>
-这会在启动本地服务器时，监听文件改动，当文件改动时，会自动刷新浏览器。</li>
-</ul>
-<h2 id="常见踩坑提示"><a href="#常见踩坑提示" class="headerlink" title="常见踩坑提示"></a>常见踩坑提示</h2><ul>
-<li>hexo d 部署失败：检查 _config.yml 的 deploy 配置，确认安装部署插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
-<li>页面不更新，执行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-这会清理 Hexo 缓存，包括临时文件、缓存等。</li>
-<li>本地预览失败，执行<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s -p 端口号</span><br></pre></td></tr></table></figure>
-这会在启动本地服务器时，指定端口号，默认端口号为 4000。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术文档</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>水贴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文档写累了，写个贪吃蛇玩玩</title>
-    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
-    <content><![CDATA[<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>贪吃蛇WASD版</title>
-<style>
-body{
-    background:#f7f2e9;
-    padding:40px 20px;
-    margin:0;
-    font-family:Georgia,"Times New Roman",serif;
-    color:#3a2e24;
-}
-.wrap{
-    width:608px;
-    margin:0 auto;
-}
-h2{
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:1px;
-    margin-bottom:12px;
-}
-canvas {
-    border:2px solid #b8956a;
-    border-radius:4px;
-    background:#f0e6d2;
-    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-<h2>贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
-<canvas id="snakeCanvas" width="608" height="608"></canvas>
-</div>
-
-<script>
-const canvas = document.getElementById('snakeCanvas');
-const ctx = canvas.getContext('2d');
-const size = 32;
-
-let autoPlay = false;
-
-function resetGame(){
-    snake = [{x:8,y:8}];
-    spawnFood();
-    dir = {x:1, y:0};
-    nextDir = {x:1, y:0};
-    gameOver = false;
-    autoPlay = false;
-}
-
-let snake = [{x:8,y:8}];
-let food = {x:10,y:9};
-let dir = {x:1, y:0};
-let nextDir = {x:1, y:0};
-let gameOver = false;
-
-const gridW = 19;
-const gridH = 19;
-
-function spawnFood(){
-    let newFood;
-    while(true){
-        let rx = Math.floor(Math.random() * gridW);
-        let ry = Math.floor(Math.random() * gridH);
-        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
-        if(!onSnake){
-            newFood = {x:rx,y:ry};
-            break;
-        }
-    }
-    food = newFood;
-}
-
-// BFS广度优先寻路，返回第一步方向，无路返回null
-function bfsFindPath(start, target, snakeBody){
-    const dirs = [ {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1} ];
-    const visited = new Set();
-    const queue = [];
-    queue.push({x:start.x, y:start.y, path:[]});
-    visited.add(`${start.x},${start.y}`);
-
-    while(queue.length>0){
-        const cur = queue.shift();
-        if(cur.x === target.x && cur.y === target.y){
-            return cur.path.length>0 ? cur.path[0] : null;
-        }
-        for(const d of dirs){
-            const nx = cur.x + d.x;
-            const ny = cur.y + d.y;
-            const key = `${nx},${ny}`;
-            //边界、蛇身、已访问过滤
-            if(nx>=0 && nx<gridW && ny>=0 && ny<gridH
-                && !visited.has(key)
-                && !snakeBody.some(s=>s.x===nx&&s.y===ny)){
-                visited.add(key);
-                const newPath = [...cur.path, d];
-                queue.push({x:nx,y:ny,path:newPath});
-            }
-        }
-    }
-    return null;
-}
-
-function aiAutoMove(){
-    if(gameOver) return;
-    const head = snake[0];
-    const firstStep = bfsFindPath(head, food, snake);
-    if(firstStep){
-        nextDir = firstStep;
-    }
-}
-
-function draw() {
-    ctx.fillStyle = "#f0e6d2";
-    ctx.fillRect(0, 0, 608, 608);
-
-    ctx.fillStyle = "#d4a056";
-    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
-
-    ctx.fillStyle = "#4a6f53";
-    for(let i = 0; i < snake.length; i++){
-        let p = snake[i];
-        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
-    }
-
-    if(!gameOver && snake.length > 0){
-        let head = snake[0];
-        ctx.fillStyle = "#5d8967";
-        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
-    }
-
-    if(gameOver){
-        ctx.fillStyle = "#3a2e24";
-        ctx.font = "36px Georgia, serif";
-        ctx.textAlign = "center";
-        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
-    }
-}
-
-function tick() {
-    if(gameOver) return;
-
-    if(autoPlay){
-        aiAutoMove();
-    }
-
-    dir = {...nextDir};
-    let head = {
-        x: snake[0].x + dir.x,
-        y: snake[0].y + dir.y
-    };
-
-    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
-        gameOver = true;
-        draw();
-        return;
-    }
-
-    for(let i=0;i<snake.length;i++){
-        if(head.x === snake[i].x && head.y === snake[i].y){
-            gameOver = true;
-            draw();
-            return;
-        }
-    }
-
-    snake.unshift(head);
-    if(head.x === food.x && head.y === food.y){
-        spawnFood();
-    }else{
-        snake.pop();
-    }
-
-    draw();
-}
-
-document.onkeydown = function(e){
-    let key = e.key;
-
-    if(key === 'p' || key === 'P'){
-        autoPlay = !autoPlay;
-        return;
-    }
-
-    if(key === 'r' || key === 'R'){
-        resetGame();
-        return;
-    }
-
-    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
-    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
-    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
-    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
-
-    if(key === "w" || key === "W"){
-        if(dir.y !==1) nextDir = {x:0,y:-1};
-    }
-    if(key === "s" || key === "S"){
-        if(dir.y !==-1) nextDir = {x:0,y:1};
-    }
-    if(key === "a" || key === "A"){
-        if(dir.x !==1) nextDir = {x:-1,y:0};
-    }
-    if(key === "d" || key === "D"){
-        if(dir.x !==-1) nextDir = {x:1,y:0};
-    }
-};
-
-resetGame();
-setInterval(tick,150);
-</script>
-</body>
-</html>]]></content>
-      <categories>
-        <category>一点小把戏</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>整活</tag>
       </tags>
   </entry>
   <entry>
@@ -1132,6 +905,233 @@ setInterval(tick,150);
   })();
 </script>
 ]]></content>
+      <categories>
+        <category>一点小把戏</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>整活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文档写累了，写个贪吃蛇玩玩</title>
+    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>贪吃蛇WASD版</title>
+<style>
+body{
+    background:#f7f2e9;
+    padding:40px 20px;
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#3a2e24;
+}
+.wrap{
+    width:608px;
+    margin:0 auto;
+}
+h2{
+    text-align:center;
+    font-weight:normal;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+canvas {
+    border:2px solid #b8956a;
+    border-radius:4px;
+    background:#f0e6d2;
+    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h2>贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
+<canvas id="snakeCanvas" width="608" height="608"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById('snakeCanvas');
+const ctx = canvas.getContext('2d');
+const size = 32;
+
+let autoPlay = false;
+
+function resetGame(){
+    snake = [{x:8,y:8}];
+    spawnFood();
+    dir = {x:1, y:0};
+    nextDir = {x:1, y:0};
+    gameOver = false;
+    autoPlay = false;
+}
+
+let snake = [{x:8,y:8}];
+let food = {x:10,y:9};
+let dir = {x:1, y:0};
+let nextDir = {x:1, y:0};
+let gameOver = false;
+
+const gridW = 19;
+const gridH = 19;
+
+function spawnFood(){
+    let newFood;
+    while(true){
+        let rx = Math.floor(Math.random() * gridW);
+        let ry = Math.floor(Math.random() * gridH);
+        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
+        if(!onSnake){
+            newFood = {x:rx,y:ry};
+            break;
+        }
+    }
+    food = newFood;
+}
+
+// BFS广度优先寻路，返回第一步方向，无路返回null
+function bfsFindPath(start, target, snakeBody){
+    const dirs = [ {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1} ];
+    const visited = new Set();
+    const queue = [];
+    queue.push({x:start.x, y:start.y, path:[]});
+    visited.add(`${start.x},${start.y}`);
+
+    while(queue.length>0){
+        const cur = queue.shift();
+        if(cur.x === target.x && cur.y === target.y){
+            return cur.path.length>0 ? cur.path[0] : null;
+        }
+        for(const d of dirs){
+            const nx = cur.x + d.x;
+            const ny = cur.y + d.y;
+            const key = `${nx},${ny}`;
+            //边界、蛇身、已访问过滤
+            if(nx>=0 && nx<gridW && ny>=0 && ny<gridH
+                && !visited.has(key)
+                && !snakeBody.some(s=>s.x===nx&&s.y===ny)){
+                visited.add(key);
+                const newPath = [...cur.path, d];
+                queue.push({x:nx,y:ny,path:newPath});
+            }
+        }
+    }
+    return null;
+}
+
+function aiAutoMove(){
+    if(gameOver) return;
+    const head = snake[0];
+    const firstStep = bfsFindPath(head, food, snake);
+    if(firstStep){
+        nextDir = firstStep;
+    }
+}
+
+function draw() {
+    ctx.fillStyle = "#f0e6d2";
+    ctx.fillRect(0, 0, 608, 608);
+
+    ctx.fillStyle = "#d4a056";
+    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
+
+    ctx.fillStyle = "#4a6f53";
+    for(let i = 0; i < snake.length; i++){
+        let p = snake[i];
+        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
+    }
+
+    if(!gameOver && snake.length > 0){
+        let head = snake[0];
+        ctx.fillStyle = "#5d8967";
+        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
+    }
+
+    if(gameOver){
+        ctx.fillStyle = "#3a2e24";
+        ctx.font = "36px Georgia, serif";
+        ctx.textAlign = "center";
+        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
+    }
+}
+
+function tick() {
+    if(gameOver) return;
+
+    if(autoPlay){
+        aiAutoMove();
+    }
+
+    dir = {...nextDir};
+    let head = {
+        x: snake[0].x + dir.x,
+        y: snake[0].y + dir.y
+    };
+
+    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
+        gameOver = true;
+        draw();
+        return;
+    }
+
+    for(let i=0;i<snake.length;i++){
+        if(head.x === snake[i].x && head.y === snake[i].y){
+            gameOver = true;
+            draw();
+            return;
+        }
+    }
+
+    snake.unshift(head);
+    if(head.x === food.x && head.y === food.y){
+        spawnFood();
+    }else{
+        snake.pop();
+    }
+
+    draw();
+}
+
+document.onkeydown = function(e){
+    let key = e.key;
+
+    if(key === 'p' || key === 'P'){
+        autoPlay = !autoPlay;
+        return;
+    }
+
+    if(key === 'r' || key === 'R'){
+        resetGame();
+        return;
+    }
+
+    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
+    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
+    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
+    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
+
+    if(key === "w" || key === "W"){
+        if(dir.y !==1) nextDir = {x:0,y:-1};
+    }
+    if(key === "s" || key === "S"){
+        if(dir.y !==-1) nextDir = {x:0,y:1};
+    }
+    if(key === "a" || key === "A"){
+        if(dir.x !==1) nextDir = {x:-1,y:0};
+    }
+    if(key === "d" || key === "D"){
+        if(dir.x !==-1) nextDir = {x:1,y:0};
+    }
+};
+
+resetGame();
+setInterval(tick,150);
+</script>
+</body>
+</html>]]></content>
       <categories>
         <category>一点小把戏</category>
       </categories>
