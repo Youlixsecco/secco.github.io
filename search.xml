@@ -102,6 +102,41 @@
       </tags>
   </entry>
   <entry>
+    <title>butterfly配置指南</title>
+    <url>/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><ul>
+<li>butterfly 的配置文件一般在 <code>themes/butterfly/_config.yml</code> 中,但是一般情况下我们不直接修改这个文件,而是复制这个文件到根目录下,保存为 <code>_config.butterfly.yml</code> ,然后在 <code>_config.butterfly.yml</code> 中进行配置</li>
+</ul>
+<h3 id="blog-图片修改"><a href="#blog-图片修改" class="headerlink" title="blog 图片修改"></a>blog 图片修改</h3><ul>
+<li>首页图片修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 首页图片</span></span><br><span class="line"><span class="attr">index_image:</span> <span class="string">/img/example.png</span> <span class="comment"># /img/在source目录下</span></span><br></pre></td></tr></table></figure></li>
+<li>个人头像修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 个人头像</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">/img/example.png</span>   <span class="comment"># example.png替换为自己的头像</span></span><br><span class="line">  <span class="attr">effect:</span> <span class="literal">false</span>           <span class="comment"># 关闭头像效果</span></span><br></pre></td></tr></table></figure></li>
+<li>logo 修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># logo</span></span><br><span class="line"><span class="attr">logo:</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">/img/example.png</span>   <span class="comment"># example.png替换为自己的logo</span></span><br><span class="line">  <span class="attr">effect:</span> <span class="literal">false</span>           <span class="comment"># 关闭logo效果</span></span><br></pre></td></tr></table></figure></li>
+<li>网站图标修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站图标</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/img/favicon.png</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="blog-导航栏配置"><a href="#blog-导航栏配置" class="headerlink" title="blog 导航栏配置"></a>blog 导航栏配置</h3><ul>
+<li>导航栏修改位置如下，不需要的可以用#注释掉<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导航栏</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">友链:</span> <span class="string">/link/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-heart</span></span><br></pre></td></tr></table></figure></li>
+<li>如果导航栏里有 <code>标签</code> <code>分类</code> <code>友链</code> <code>关于</code> 这几个选项,则需要分别执行以下命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page tags</span><br><span class="line">npx hexo new page categories</span><br><span class="line">npx hexo new page <span class="built_in">link</span></span><br><span class="line">npx hexo new page about</span><br></pre></td></tr></table></figure></li>
+<li>命令执行后会在 <code>source</code> 目录下生成对应的页面文件夹及文件，分别替换以下文件里的内容<br><code>source/tags/index.md</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-23 02:35:32</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<code>source/categories/index.md</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-23 02:35:32</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<code>source/about/index.md</code> 页面可以自定义内容,例如添加个人介绍、联系邮箱等</li>
+</ul>
+<h3 id="侧边栏配置"><a href="#侧边栏配置" class="headerlink" title="侧边栏配置"></a>侧边栏配置</h3><ul>
+<li>侧边栏修改位置如下，不需要的可以用#注释掉<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aside:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 开启侧边栏</span></span><br><span class="line">  <span class="attr">hide:</span> <span class="literal">false</span>     <span class="comment"># 隐藏侧边栏</span></span><br><span class="line">  <span class="attr">button:</span> <span class="literal">true</span>    <span class="comment"># 显示侧边栏按钮</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">true</span>    <span class="comment"># 开启移动端侧边栏</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">right</span> <span class="comment"># 侧边栏位置</span></span><br><span class="line">  <span class="attr">display:</span>        <span class="comment"># 侧边栏显示内容</span></span><br><span class="line">    <span class="attr">archive:</span> <span class="literal">true</span>   <span class="comment"># 显示归档</span></span><br><span class="line">    <span class="attr">tag:</span> <span class="literal">true</span>       <span class="comment"># 显示标签</span></span><br><span class="line">    <span class="attr">category:</span> <span class="literal">true</span>  <span class="comment"># 显示分类</span></span><br><span class="line">  <span class="attr">card_author:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示作者卡片</span></span><br><span class="line">      <span class="attr">button:</span></span><br><span class="line">        <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示作者卡片按钮</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fab</span> <span class="string">fa-github</span>    <span class="comment"># 作者卡片按钮图标</span></span><br><span class="line">        <span class="attr">text:</span> <span class="string">Follow</span> <span class="string">Me</span>    <span class="comment"># 作者卡片按钮文本</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://www.example.com/</span>    <span class="comment"># 作者卡片按钮链接</span></span><br><span class="line">  <span class="attr">card_announcement:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示公告卡片</span></span><br><span class="line">      <span class="attr">content:</span> <span class="string">欢迎来到我的博客。</span>    <span class="comment"># 公告卡片内容</span></span><br><span class="line">  <span class="attr">card_recent_post:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示最近文章卡片</span></span><br><span class="line">  <span class="attr">card_categories:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示分类卡片</span></span><br><span class="line">  <span class="attr">card_tags:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示标签卡片</span></span><br><span class="line">  <span class="attr">card_archives:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">false</span>   <span class="comment"># 显示归档卡片</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>单篇文章书写示例<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">单篇文章书写示例</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-24 15:21:25</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">单篇文章</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">示例</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">技术文档</span></span><br><span class="line"><span class="attr">cover:</span> <span class="string">/img/example.png</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术文档</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>butterfly</tag>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo常用指令</title>
     <url>/2026/08/23/hexo%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="基础核心命令"><a href="#基础核心命令" class="headerlink" title="基础核心命令"></a>基础核心命令</h2><ul>
@@ -269,38 +304,230 @@
       </tags>
   </entry>
   <entry>
-    <title>butterfly配置指南</title>
-    <url>/2026/08/24/butterfly%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h3 id="配置文件介绍"><a href="#配置文件介绍" class="headerlink" title="配置文件介绍"></a>配置文件介绍</h3><ul>
-<li>butterfly 的配置文件一般在 <code>themes/butterfly/_config.yml</code> 中,但是一般情况下我们不直接修改这个文件,而是复制这个文件到根目录下,保存为 <code>_config.butterfly.yml</code> ,然后在 <code>_config.butterfly.yml</code> 中进行配置</li>
-</ul>
-<h3 id="blog-图片修改"><a href="#blog-图片修改" class="headerlink" title="blog 图片修改"></a>blog 图片修改</h3><ul>
-<li>首页图片修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 首页图片</span></span><br><span class="line"><span class="attr">index_image:</span> <span class="string">/img/example.png</span> <span class="comment"># /img/在source目录下</span></span><br></pre></td></tr></table></figure></li>
-<li>个人头像修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 个人头像</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">/img/example.png</span>   <span class="comment"># example.png替换为自己的头像</span></span><br><span class="line">  <span class="attr">effect:</span> <span class="literal">false</span>           <span class="comment"># 关闭头像效果</span></span><br></pre></td></tr></table></figure></li>
-<li>logo 修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># logo</span></span><br><span class="line"><span class="attr">logo:</span></span><br><span class="line">  <span class="attr">img:</span> <span class="string">/img/example.png</span>   <span class="comment"># example.png替换为自己的logo</span></span><br><span class="line">  <span class="attr">effect:</span> <span class="literal">false</span>           <span class="comment"># 关闭logo效果</span></span><br></pre></td></tr></table></figure></li>
-<li>网站图标修改位置如下<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 网站图标</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/img/favicon.png</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="blog-导航栏配置"><a href="#blog-导航栏配置" class="headerlink" title="blog 导航栏配置"></a>blog 导航栏配置</h3><ul>
-<li>导航栏修改位置如下，不需要的可以用#注释掉<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导航栏</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">友链:</span> <span class="string">/link/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-heart</span></span><br></pre></td></tr></table></figure></li>
-<li>如果导航栏里有 <code>标签</code> <code>分类</code> <code>友链</code> <code>关于</code> 这几个选项,则需要分别执行以下命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo new page tags</span><br><span class="line">npx hexo new page categories</span><br><span class="line">npx hexo new page <span class="built_in">link</span></span><br><span class="line">npx hexo new page about</span><br></pre></td></tr></table></figure></li>
-<li>命令执行后会在 <code>source</code> 目录下生成对应的页面文件夹及文件，分别替换以下文件里的内容<br><code>source/tags/index.md</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-23 02:35:32</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<code>source/categories/index.md</code><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-23 02:35:32</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<code>source/about/index.md</code> 页面可以自定义内容,例如添加个人介绍、联系邮箱等</li>
-</ul>
-<h3 id="侧边栏配置"><a href="#侧边栏配置" class="headerlink" title="侧边栏配置"></a>侧边栏配置</h3><ul>
-<li>侧边栏修改位置如下，不需要的可以用#注释掉<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aside:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 开启侧边栏</span></span><br><span class="line">  <span class="attr">hide:</span> <span class="literal">false</span>     <span class="comment"># 隐藏侧边栏</span></span><br><span class="line">  <span class="attr">button:</span> <span class="literal">true</span>    <span class="comment"># 显示侧边栏按钮</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">true</span>    <span class="comment"># 开启移动端侧边栏</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">right</span> <span class="comment"># 侧边栏位置</span></span><br><span class="line">  <span class="attr">display:</span>        <span class="comment"># 侧边栏显示内容</span></span><br><span class="line">    <span class="attr">archive:</span> <span class="literal">true</span>   <span class="comment"># 显示归档</span></span><br><span class="line">    <span class="attr">tag:</span> <span class="literal">true</span>       <span class="comment"># 显示标签</span></span><br><span class="line">    <span class="attr">category:</span> <span class="literal">true</span>  <span class="comment"># 显示分类</span></span><br><span class="line">  <span class="attr">card_author:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示作者卡片</span></span><br><span class="line">      <span class="attr">button:</span></span><br><span class="line">        <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示作者卡片按钮</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fab</span> <span class="string">fa-github</span>    <span class="comment"># 作者卡片按钮图标</span></span><br><span class="line">        <span class="attr">text:</span> <span class="string">Follow</span> <span class="string">Me</span>    <span class="comment"># 作者卡片按钮文本</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://www.example.com/</span>    <span class="comment"># 作者卡片按钮链接</span></span><br><span class="line">  <span class="attr">card_announcement:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示公告卡片</span></span><br><span class="line">      <span class="attr">content:</span> <span class="string">欢迎来到我的博客。</span>    <span class="comment"># 公告卡片内容</span></span><br><span class="line">  <span class="attr">card_recent_post:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示最近文章卡片</span></span><br><span class="line">  <span class="attr">card_categories:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示分类卡片</span></span><br><span class="line">  <span class="attr">card_tags:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span>    <span class="comment"># 显示标签卡片</span></span><br><span class="line">  <span class="attr">card_archives:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">false</span>   <span class="comment"># 显示归档卡片</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>单篇文章书写示例<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">单篇文章书写示例</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-08-24 15:21:25</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">单篇文章</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">示例</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">技术文档</span></span><br><span class="line"><span class="attr">cover:</span> <span class="string">/img/example.png</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
+    <title>文档写累了，写个贪吃蛇玩玩</title>
+    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>贪吃蛇WASD版</title>
+<style>
+body{
+    background:#f7f2e9;
+    padding:40px 20px;
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    color:#3a2e24;
+}
+.wrap{
+    width:608px;
+    margin:0 auto;
+}
+h2{
+    text-align:center;
+    font-weight:normal;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+canvas {
+    border:2px solid #b8956a;
+    border-radius:4px;
+    background:#f0e6d2;
+    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h2>贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
+<canvas id="snakeCanvas" width="608" height="608"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById('snakeCanvas');
+const ctx = canvas.getContext('2d');
+const size = 32;
+
+let autoPlay = false;
+
+function resetGame(){
+    snake = [{x:8,y:8}];
+    spawnFood();
+    dir = {x:1, y:0};
+    nextDir = {x:1, y:0};
+    gameOver = false;
+    autoPlay = false;
+}
+
+let snake = [{x:8,y:8}];
+let food = {x:10,y:9};
+let dir = {x:1, y:0};
+let nextDir = {x:1, y:0};
+let gameOver = false;
+
+const gridW = 19;
+const gridH = 19;
+
+function spawnFood(){
+    let newFood;
+    while(true){
+        let rx = Math.floor(Math.random() * gridW);
+        let ry = Math.floor(Math.random() * gridH);
+        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
+        if(!onSnake){
+            newFood = {x:rx,y:ry};
+            break;
+        }
+    }
+    food = newFood;
+}
+
+// BFS广度优先寻路，返回第一步方向，无路返回null
+function bfsFindPath(start, target, snakeBody){
+    const dirs = [ {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1} ];
+    const visited = new Set();
+    const queue = [];
+    queue.push({x:start.x, y:start.y, path:[]});
+    visited.add(`${start.x},${start.y}`);
+
+    while(queue.length>0){
+        const cur = queue.shift();
+        if(cur.x === target.x && cur.y === target.y){
+            return cur.path.length>0 ? cur.path[0] : null;
+        }
+        for(const d of dirs){
+            const nx = cur.x + d.x;
+            const ny = cur.y + d.y;
+            const key = `${nx},${ny}`;
+            //边界、蛇身、已访问过滤
+            if(nx>=0 && nx<gridW && ny>=0 && ny<gridH
+                && !visited.has(key)
+                && !snakeBody.some(s=>s.x===nx&&s.y===ny)){
+                visited.add(key);
+                const newPath = [...cur.path, d];
+                queue.push({x:nx,y:ny,path:newPath});
+            }
+        }
+    }
+    return null;
+}
+
+function aiAutoMove(){
+    if(gameOver) return;
+    const head = snake[0];
+    const firstStep = bfsFindPath(head, food, snake);
+    if(firstStep){
+        nextDir = firstStep;
+    }
+}
+
+function draw() {
+    ctx.fillStyle = "#f0e6d2";
+    ctx.fillRect(0, 0, 608, 608);
+
+    ctx.fillStyle = "#d4a056";
+    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
+
+    ctx.fillStyle = "#4a6f53";
+    for(let i = 0; i < snake.length; i++){
+        let p = snake[i];
+        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
+    }
+
+    if(!gameOver && snake.length > 0){
+        let head = snake[0];
+        ctx.fillStyle = "#5d8967";
+        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
+    }
+
+    if(gameOver){
+        ctx.fillStyle = "#3a2e24";
+        ctx.font = "36px Georgia, serif";
+        ctx.textAlign = "center";
+        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
+    }
+}
+
+function tick() {
+    if(gameOver) return;
+
+    if(autoPlay){
+        aiAutoMove();
+    }
+
+    dir = {...nextDir};
+    let head = {
+        x: snake[0].x + dir.x,
+        y: snake[0].y + dir.y
+    };
+
+    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
+        gameOver = true;
+        draw();
+        return;
+    }
+
+    for(let i=0;i<snake.length;i++){
+        if(head.x === snake[i].x && head.y === snake[i].y){
+            gameOver = true;
+            draw();
+            return;
+        }
+    }
+
+    snake.unshift(head);
+    if(head.x === food.x && head.y === food.y){
+        spawnFood();
+    }else{
+        snake.pop();
+    }
+
+    draw();
+}
+
+document.onkeydown = function(e){
+    let key = e.key;
+
+    if(key === 'p' || key === 'P'){
+        autoPlay = !autoPlay;
+        return;
+    }
+
+    if(key === 'r' || key === 'R'){
+        resetGame();
+        return;
+    }
+
+    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
+    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
+    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
+    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
+
+    if(key === "w" || key === "W"){
+        if(dir.y !==1) nextDir = {x:0,y:-1};
+    }
+    if(key === "s" || key === "S"){
+        if(dir.y !==-1) nextDir = {x:0,y:1};
+    }
+    if(key === "a" || key === "A"){
+        if(dir.x !==1) nextDir = {x:-1,y:0};
+    }
+    if(key === "d" || key === "D"){
+        if(dir.x !==-1) nextDir = {x:1,y:0};
+    }
+};
+
+resetGame();
+setInterval(tick,150);
+</script>
+</body>
+</html>]]></content>
       <categories>
-        <category>技术文档</category>
+        <category>一点小把戏</category>
       </categories>
       <tags>
-        <tag>blog</tag>
-        <tag>butterfly</tag>
-        <tag>配置</tag>
+        <tag>游戏</tag>
+        <tag>整活</tag>
       </tags>
   </entry>
   <entry>
@@ -905,233 +1132,6 @@
   })();
 </script>
 ]]></content>
-      <categories>
-        <category>一点小把戏</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>整活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文档写累了，写个贪吃蛇玩玩</title>
-    <url>/2026/08/24/%E6%96%87%E6%A1%A3%E5%86%99%E7%B4%AF%E4%BA%86%EF%BC%8C%E5%86%99%E4%B8%AA%E8%B4%AA%E5%90%83%E8%9B%87%E7%8E%A9%E7%8E%A9/</url>
-    <content><![CDATA[<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>贪吃蛇WASD版</title>
-<style>
-body{
-    background:#f7f2e9;
-    padding:40px 20px;
-    margin:0;
-    font-family:Georgia,"Times New Roman",serif;
-    color:#3a2e24;
-}
-.wrap{
-    width:608px;
-    margin:0 auto;
-}
-h2{
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:1px;
-    margin-bottom:12px;
-}
-canvas {
-    border:2px solid #b8956a;
-    border-radius:4px;
-    background:#f0e6d2;
-    box-shadow:inset 0 0 0 1px rgba(184,149,106,0.3), 0 4px 12px rgba(0,0,0,0.08);
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-<h2>贪吃蛇游戏（WASD / 方向键｜R键重新开始）</h2>
-<canvas id="snakeCanvas" width="608" height="608"></canvas>
-</div>
-
-<script>
-const canvas = document.getElementById('snakeCanvas');
-const ctx = canvas.getContext('2d');
-const size = 32;
-
-let autoPlay = false;
-
-function resetGame(){
-    snake = [{x:8,y:8}];
-    spawnFood();
-    dir = {x:1, y:0};
-    nextDir = {x:1, y:0};
-    gameOver = false;
-    autoPlay = false;
-}
-
-let snake = [{x:8,y:8}];
-let food = {x:10,y:9};
-let dir = {x:1, y:0};
-let nextDir = {x:1, y:0};
-let gameOver = false;
-
-const gridW = 19;
-const gridH = 19;
-
-function spawnFood(){
-    let newFood;
-    while(true){
-        let rx = Math.floor(Math.random() * gridW);
-        let ry = Math.floor(Math.random() * gridH);
-        let onSnake = snake.some(p=>p.x === rx && p.y === ry);
-        if(!onSnake){
-            newFood = {x:rx,y:ry};
-            break;
-        }
-    }
-    food = newFood;
-}
-
-// BFS广度优先寻路，返回第一步方向，无路返回null
-function bfsFindPath(start, target, snakeBody){
-    const dirs = [ {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1} ];
-    const visited = new Set();
-    const queue = [];
-    queue.push({x:start.x, y:start.y, path:[]});
-    visited.add(`${start.x},${start.y}`);
-
-    while(queue.length>0){
-        const cur = queue.shift();
-        if(cur.x === target.x && cur.y === target.y){
-            return cur.path.length>0 ? cur.path[0] : null;
-        }
-        for(const d of dirs){
-            const nx = cur.x + d.x;
-            const ny = cur.y + d.y;
-            const key = `${nx},${ny}`;
-            //边界、蛇身、已访问过滤
-            if(nx>=0 && nx<gridW && ny>=0 && ny<gridH
-                && !visited.has(key)
-                && !snakeBody.some(s=>s.x===nx&&s.y===ny)){
-                visited.add(key);
-                const newPath = [...cur.path, d];
-                queue.push({x:nx,y:ny,path:newPath});
-            }
-        }
-    }
-    return null;
-}
-
-function aiAutoMove(){
-    if(gameOver) return;
-    const head = snake[0];
-    const firstStep = bfsFindPath(head, food, snake);
-    if(firstStep){
-        nextDir = firstStep;
-    }
-}
-
-function draw() {
-    ctx.fillStyle = "#f0e6d2";
-    ctx.fillRect(0, 0, 608, 608);
-
-    ctx.fillStyle = "#d4a056";
-    ctx.fillRect(food.x * size + 4, food.y * size + 4, size - 8, size - 8);
-
-    ctx.fillStyle = "#4a6f53";
-    for(let i = 0; i < snake.length; i++){
-        let p = snake[i];
-        ctx.fillRect(p.x * size + 3, p.y * size + 3, size - 6, size - 6);
-    }
-
-    if(!gameOver && snake.length > 0){
-        let head = snake[0];
-        ctx.fillStyle = "#5d8967";
-        ctx.fillRect(head.x * size + 2, head.y * size + 2, size - 4, size - 4);
-    }
-
-    if(gameOver){
-        ctx.fillStyle = "#3a2e24";
-        ctx.font = "36px Georgia, serif";
-        ctx.textAlign = "center";
-        ctx.fillText("游戏结束，按 R 重新开始", 304, 300);
-    }
-}
-
-function tick() {
-    if(gameOver) return;
-
-    if(autoPlay){
-        aiAutoMove();
-    }
-
-    dir = {...nextDir};
-    let head = {
-        x: snake[0].x + dir.x,
-        y: snake[0].y + dir.y
-    };
-
-    if(head.x <0 || head.x >= gridW || head.y <0 || head.y >= gridH){
-        gameOver = true;
-        draw();
-        return;
-    }
-
-    for(let i=0;i<snake.length;i++){
-        if(head.x === snake[i].x && head.y === snake[i].y){
-            gameOver = true;
-            draw();
-            return;
-        }
-    }
-
-    snake.unshift(head);
-    if(head.x === food.x && head.y === food.y){
-        spawnFood();
-    }else{
-        snake.pop();
-    }
-
-    draw();
-}
-
-document.onkeydown = function(e){
-    let key = e.key;
-
-    if(key === 'p' || key === 'P'){
-        autoPlay = !autoPlay;
-        return;
-    }
-
-    if(key === 'r' || key === 'R'){
-        resetGame();
-        return;
-    }
-
-    if(key === "ArrowUp" && dir.y !== 1) nextDir = {x:0,y:-1};
-    if(key === "ArrowDown" && dir.y !== -1) nextDir = {x:0,y:1};
-    if(key === "ArrowLeft" && dir.x !== 1) nextDir = {x:-1,y:0};
-    if(key === "ArrowRight" && dir.x !== -1) nextDir = {x:1,y:0};
-
-    if(key === "w" || key === "W"){
-        if(dir.y !==1) nextDir = {x:0,y:-1};
-    }
-    if(key === "s" || key === "S"){
-        if(dir.y !==-1) nextDir = {x:0,y:1};
-    }
-    if(key === "a" || key === "A"){
-        if(dir.x !==1) nextDir = {x:-1,y:0};
-    }
-    if(key === "d" || key === "D"){
-        if(dir.x !==-1) nextDir = {x:1,y:0};
-    }
-};
-
-resetGame();
-setInterval(tick,150);
-</script>
-</body>
-</html>]]></content>
       <categories>
         <category>一点小把戏</category>
       </categories>
